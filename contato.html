@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com Rodrigo Viana - BI, Dados, Python">
+    <meta name="keywords" content="Contato, Rodrigo Viana, BI, Python, Dados, WhatsApp, E-mail">
+    <meta name="author" content="Rodrigo Viana">
+    <title>Contato - Rodrigo Viana</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" data-aos="fade-up">
+        <h1>Entre em Contato</h1>
+        <p>Fique à vontade para me chamar diretamente pelo WhatsApp ou enviar um E-mail.</p>
+
+        <div class="botoes">
+            <a href="https://wa.me/5511978681580" target="_blank" class="btn-whatsapp">
+                <img src="img/logos/whatsapp.png" alt="WhatsApp"> WhatsApp
+            </a>
+            <a href="mailto:rodrigor.vianna07@gmail.com" class="btn-gmail">
+                <img src="img/logos/gmail.png" alt="E-mail"> G-mail
+            </a>
+        </div>
+    </section>
+
+    <section class="formulario" data-aos="fade-right">
+        <h2>Envie uma mensagem</h2>
+        <form id="formContato" onsubmit="return enviarMensagem()">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="feedback" style="display:none; color: green; margin-top: 15px;">Mensagem enviada com sucesso (simulação)!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Rodrigo Viana - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        function enviarMensagem() {
+            document.getElementById('feedback').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('feedback').style.display = 'none';
+                document.getElementById('formContato').reset();
+            }, 3000);
+            return false;
+        }
+    </script>
+</body>
+
+</html>

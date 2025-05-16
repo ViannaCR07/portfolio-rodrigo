@@ -2,101 +2,85 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio de Rodrigo Viana - BI, Python, Dados e Análises.">
-  <meta name="keywords" content="Rodrigo Viana, Portfólio, BI, Python, Dados, Análises, Power BI, SQL">
-  <meta name="author" content="Rodrigo Viana">
-  <title>Portfólio Rodrigo Viana</title>
-  <link rel="shortcut icon" href="img/logos/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Rodrigo Viana - BI, Python, Dados e Análises.">
+    <meta name="keywords" content="Rodrigo Viana, Portfólio, BI, Python, Dados, Análises, Power BI, SQL">
+    <meta name="author" content="Rodrigo Viana">
+    <title>Portfólio Rodrigo Viana</title>
+    <link rel="shortcut icon" href="img/logos/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <header>
-    <nav class="navbar">
-      <div class="nav-brand">
-        <a href="index.html">Rodrigo Viana</a>
-      </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <button class="menu-toggle" aria-label="Abrir menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
+    <section class="hero" data-aos="fade-up">
+        <img src="img/minha-foto.jpeg" alt="Foto Rodrigo Viana">
+        <h1>Rodrigo Viana</h1>
+        <p>25 anos, Analista de dados. Experiências com BI, Automação em Python, Processos Operacionais e Logística</p>
 
-      <ul class="nav-links">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+        <div class="botoes">
+            <a href="https://www.linkedin.com/in/rodrigo-viana-845944164" target="_blank" class="btn-linkedin">
+                <img src="img/logos/linkedin.png" alt="LinkedIn"> LinkedIn
+            </a>
+            <a href="https://github.com/ViannaCR07" target="_blank" class="btn-github">
+                <img src="img/logos/github.png" alt="GitHub"> GitHub
+            </a>
+            <a href="https://wa.me/5511978681580" target="_blank" class="btn-whatsapp">
+                <img src="img/logos/whatsapp.png" alt="WhatsApp"> WhatsApp
+            </a>
+        </div>
+    </section>
 
-  <section class="hero" data-aos="fade-up">
-    <img src="img/minha-foto.jpeg" alt="Foto Rodrigo Viana">
-    <h1>Rodrigo Viana</h1>
-    <p>25 anos, Analista de dados. Experiências com BI, Automação em Python, Processos Operacionais e Logística</p>
+    <section class="projetos" data-aos="fade-right">
+        <h2>Projetos em Destaque</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="img/logos/python.png" alt="Python">
+                <h3>Automação Python</h3>
+                <p>Projetos de ETL, análise de dados e automação de processos usando Python.</p>
+            </div>
+            <div class="card">
+                <img src="img/logos/dashboard.png" alt="Dashboard">
+                <h3>Dashboard Power BI</h3>
+                <p>Dashboards interativos com indicadores estratégicos e operacionais.</p>
+            </div>
+            <div class="card">
+                <img src="img/logos/javascript.png" alt="JavaScript">
+                <h3>Integrações Web</h3>
+                <p>Integração de APIs e sistemas web.</p>
+            </div>
+            <!-- NOVO PROJETO -->
+            <div class="card">
+                <img src="img/logos/dashboard.png" alt="Dashboard Entregadores">
+                <h3>Dashboard de Entregadores</h3>
+                <p>Dashboard interativo em Python Streamlit com dados simulados de entregadores. KPIs operacionais, gráficos dinâmicos e ranking de performance.</p>
+                <a href="https://seu-link-do-app.streamlit.app" target="_blank">🌐 Ver Projeto</a><br>
+                <a href="https://github.com/ViannaCR07/dashboard-entregadores" target="_blank">💻 Ver Código no GitHub</a>
+            </div>
+        </div>
+    </section>
 
-    <div class="botoes">
-      <a href="https://www.linkedin.com/in/rodrigo-viana-845944164" target="_blank" class="btn-linkedin">
-        <img src="img/logos/linkedin.png" alt="LinkedIn"> LinkedIn
-      </a>
-      <a href="https://github.com/ViannaCR07" target="_blank" class="btn-github">
-        <img src="img/logos/github.png" alt="GitHub"> GitHub
-      </a>
-      <a href="https://wa.me/5511978681580" target="_blank" class="btn-whatsapp">
-        <img src="img/logos/whatsapp.png" alt="WhatsApp"> WhatsApp
-      </a>
-    </div>
-  </section>
+    <footer>
+        <p>&copy; 2025 Rodrigo Viana - Todos os direitos reservados.</p>
+    </footer>
 
-  <section class="projetos" data-aos="fade-right">
-    <h2>Projetos em Destaque</h2>
-    <div class="card-container">
-      <div class="card">
-        <img src="img/logos/python.png" alt="Python">
-        <h3>Automação Python</h3>
-        <p>Projetos de ETL, análise de dados e automação de processos usando Python.</p>
-      </div>
-      <div class="card">
-        <img src="img/logos/dashboard.png" alt="Dashboard">
-        <h3>Dashboard Power BI</h3>
-        <p>Dashboards interativos com indicadores estratégicos e operacionais.</p>
-      </div>
-      <div class="card">
-        <img src="img/logos/javascript.png" alt="JavaScript">
-        <h3>Integrações Web</h3>
-        <p>Integração de APIs e sistemas web.</p>
-      </div>
-      <div class="card">
-        <img src="img/logos/streamlit.png" alt="Dashboard em Python Streamlit">
-        <h3>Dashboard em Python Streamlit</h3>
-        <p>Dashboard interativo em Python Streamlit com dados simulados de entregadores. KPIs operacionais, gráficos dinâmicos e ranking de performance.</p>
-        <a href="https://dashboard-entregadores-rqt4cwr9mfqgv5esqxslzj.streamlit.app" target="_blank">🌐 Ver Projeto</a><br>
-        <a href="https://github.com/ViannaCR07/dashboard-entregadores" target="_blank">💻 Ver Código no GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Rodrigo Viana - Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const toggle = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-
-      toggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
-    });
-  </script>
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

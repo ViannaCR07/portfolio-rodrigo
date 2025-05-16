@@ -11,14 +11,14 @@ img {
     height: auto;
 }
 
-/* Estilização de seções para centralizar o conteúdo */
+/* Seções centralizadas */
 section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Corpo da página */
+/* Corpo */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #f4f4f4;
@@ -26,35 +26,68 @@ body {
     line-height: 1.6;
 }
 
-/* Cabeçalho e menu */
-header {
-    background: #222;
-    padding: 10px 0;
-}
-header nav ul {
+/* Navbar */
+.navbar {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    padding: 10px 20px;
+}
+
+.nav-brand a {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
     list-style: none;
 }
-header nav ul li {
-    margin: 0 15px;
+
+.nav-links li {
+    margin-left: 20px;
 }
-header nav ul li a {
+
+.nav-links a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
-header nav ul li a:hover {
+
+.nav-links a:hover {
     color: #00bfff;
 }
 
-/* Seção Hero */
+/* Botão hambúrguer (escondido no desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 4px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Hero */
 .hero {
     text-align: center;
     padding: 50px 20px;
     background: #fff;
 }
+
 .hero img {
     width: 150px;
     height: 150px;
@@ -62,10 +95,12 @@ header nav ul li a:hover {
     object-fit: cover;
     margin-bottom: 20px;
 }
+
 .hero h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
 }
+
 .hero p {
     font-size: 1.2em;
     margin-bottom: 30px;
@@ -78,6 +113,7 @@ header nav ul li a:hover {
     gap: 20px;
     flex-wrap: wrap;
 }
+
 .botoes a {
     display: flex;
     align-items: center;
@@ -91,27 +127,34 @@ header nav ul li a:hover {
     color: #fff;
     font-size: 1.2em;
 }
+
 .btn-linkedin { background-color: #0077b5; }
 .btn-github   { background-color: #333; }
 .btn-whatsapp { background-color: #25d366; }
 .btn-gmail    { background-color: #d14836; }
-.botoes a:hover { opacity: 0.8; }
 
-/* Seção Projetos */
+.botoes a:hover {
+    opacity: 0.8;
+}
+
+/* Projetos */
 .projetos {
     background: #f9f9f9;
     text-align: center;
 }
+
 .projetos h2 {
     font-size: 2em;
     margin-bottom: 40px;
 }
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
+
 .card {
     background: #fff;
     padding: 20px;
@@ -121,17 +164,21 @@ header nav ul li a:hover {
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .card img {
     width: 80px;
     margin-bottom: 15px;
 }
+
 .card h3 {
     margin-bottom: 10px;
 }
+
 .card p {
     font-size: 0.95em;
     margin-bottom: 15px;
 }
+
 .card a {
     display: inline-block;
     margin-top: 10px;
@@ -140,59 +187,17 @@ header nav ul li a:hover {
     color: #0077b5;
     transition: color 0.3s;
 }
+
 .card a:hover {
     color: #005f8d;
 }
+
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px rgba(0,0,0,0.15);
 }
 
-/* Seção Formulário */
-.formulario {
-    background: #fff;
-    text-align: center;
-}
-.formulario h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
-}
-.formulario form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
-    gap: 20px;
-}
-.formulario input,
-.formulario textarea {
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1.1em;
-    width: 100%;
-    resize: vertical;
-}
-.formulario button {
-    background-color: #0077b5;
-    color: #fff;
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.formulario button:hover {
-    background-color: #005f8d;
-}
-#feedback {
-    font-weight: bold;
-    color: green;
-    margin-top: 15px;
-}
-
-/* Rodapé */
+/* Footer */
 footer {
     background: #222;
     color: #fff;
@@ -202,41 +207,57 @@ footer {
     font-size: 0.9em;
 }
 
-/* Responsividade */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
-    /* Ajustes gerais */
-    .hero h1 { font-size: 2em; }
-    .hero img { width: 100px; height: 100px; }
+  /* exibe botão hambúrguer */
+  .menu-toggle {
+    display: flex;
+  }
+  /* esconde menu até clicar */
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #222;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  /* quando ativo, expande */
+  .nav-links.active {
+    max-height: 200px; /* altura suficiente para mostrar os itens */
+  }
+  .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+  }
+  /* Hero ajustado */
+  .hero h1 { font-size: 2em; }
+  .hero img { width: 100px; height: 100px; }
 
-    /* Menu mobile */
-    header nav ul {
-        flex-direction: column;
-    }
-    header nav ul li {
-        margin: 10px 0;
-    }
+  /* Botões sociais em coluna */
+  .botoes {
+    flex-direction: column;
+    width: 100%;
+  }
+  .botoes a {
+    width: 90%;
+    justify-content: center;
+  }
 
-    /* Botões sociais em coluna */
-    .botoes {
-        flex-direction: column;
-        width: 100%;
-    }
-    .botoes a {
-        width: 90%;
-        justify-content: center;
-    }
+  /* Cards ocupam quase toda a largura */
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+  }
 
-    /* Cards ocupam quase toda a largura */
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .card {
-        width: 90%;
-    }
-
-    /* Formulário ocupa toda a largura possível */
-    .formulario form {
-        width: 90%;
-    }
+  /* Formulário ocupa largura adequada */
+  .formulario form {
+    width: 90%;
+  }
 }

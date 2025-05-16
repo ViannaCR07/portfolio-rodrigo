@@ -10,7 +10,6 @@
   <title>Portfólio Rodrigo Viana</title>
   <link rel="shortcut icon" href="img/logos/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
-  <!-- AOS Animate On Scroll -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
@@ -22,7 +21,6 @@
         <a href="index.html">Rodrigo Viana</a>
       </div>
 
-      <!-- botão hambúrguer -->
       <button class="menu-toggle" aria-label="Abrir menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -86,14 +84,17 @@
     <p>&copy; 2025 Rodrigo Viana - Todos os direitos reservados.</p>
   </footer>
 
-  <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
 
-    // Toggle menu no mobile
-    document.querySelector('.menu-toggle').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('active');
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
     });
   </script>
 </body>

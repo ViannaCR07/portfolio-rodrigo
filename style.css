@@ -5,6 +5,20 @@
     box-sizing: border-box;
 }
 
+/* Imagens nunca estouram */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilização de seções para centralizar o conteúdo */
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Corpo da página */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #f4f4f4;
@@ -12,28 +26,25 @@ body {
     line-height: 1.6;
 }
 
+/* Cabeçalho e menu */
 header {
     background: #222;
     padding: 10px 0;
 }
-
 header nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
 }
-
 header nav ul li {
     margin: 0 15px;
 }
-
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
-
 header nav ul li a:hover {
     color: #00bfff;
 }
@@ -44,7 +55,6 @@ header nav ul li a:hover {
     padding: 50px 20px;
     background: #fff;
 }
-
 .hero img {
     width: 150px;
     height: 150px;
@@ -52,12 +62,10 @@ header nav ul li a:hover {
     object-fit: cover;
     margin-bottom: 20px;
 }
-
 .hero h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
 }
-
 .hero p {
     font-size: 1.2em;
     margin-bottom: 30px;
@@ -70,105 +78,85 @@ header nav ul li a:hover {
     gap: 20px;
     flex-wrap: wrap;
 }
-
 .botoes a {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 15px 30px;
     border-radius: 8px;
     font-weight: bold;
     text-decoration: none;
-    transition: 0.3s;
+    transition: opacity 0.3s;
     gap: 15px;
     color: #fff;
     font-size: 1.2em;
 }
-
-.botoes img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-}
-
-.btn-linkedin {
-    background-color: #0077b5;
-}
-
-.btn-github {
-    background-color: #333;
-}
-
-.btn-whatsapp {
-    background-color: #25d366;
-}
-
-.btn-gmail {
-    background-color: #d14836;
-}
-
-.botoes a:hover {
-    opacity: 0.8;
-}
+.btn-linkedin { background-color: #0077b5; }
+.btn-github   { background-color: #333; }
+.btn-whatsapp { background-color: #25d366; }
+.btn-gmail    { background-color: #d14836; }
+.botoes a:hover { opacity: 0.8; }
 
 /* Seção Projetos */
 .projetos {
-    padding: 50px 20px;
     background: #f9f9f9;
     text-align: center;
 }
-
 .projetos h2 {
     font-size: 2em;
     margin-bottom: 40px;
 }
-
 .card-container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
-
 .card {
     background: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
     width: 280px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .card img {
     width: 80px;
     margin-bottom: 15px;
 }
-
 .card h3 {
     margin-bottom: 10px;
 }
-
 .card p {
     font-size: 0.95em;
+    margin-bottom: 15px;
 }
-
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0077b5;
+    transition: color 0.3s;
+}
+.card a:hover {
+    color: #005f8d;
+}
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 25px rgba(0,0,0,0.15);
 }
 
 /* Seção Formulário */
 .formulario {
-    padding: 50px 20px;
     background: #fff;
     text-align: center;
 }
-
 .formulario h2 {
     font-size: 2em;
     margin-bottom: 30px;
 }
-
 .formulario form {
     display: flex;
     flex-direction: column;
@@ -176,7 +164,6 @@ header nav ul li a:hover {
     margin: 0 auto;
     gap: 20px;
 }
-
 .formulario input,
 .formulario textarea {
     padding: 15px;
@@ -186,7 +173,6 @@ header nav ul li a:hover {
     width: 100%;
     resize: vertical;
 }
-
 .formulario button {
     background-color: #0077b5;
     color: #fff;
@@ -195,13 +181,11 @@ header nav ul li a:hover {
     border-radius: 8px;
     font-size: 1.1em;
     cursor: pointer;
-    transition: 0.3s;
+    transition: background-color 0.3s;
 }
-
 .formulario button:hover {
     background-color: #005f8d;
 }
-
 #feedback {
     font-weight: bold;
     color: green;
@@ -220,24 +204,39 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2em;
-    }
+    /* Ajustes gerais */
+    .hero h1 { font-size: 2em; }
+    .hero img { width: 100px; height: 100px; }
 
-    .botoes {
-        flex-direction: column;
-        align-items: center;
-    }
-
+    /* Menu mobile */
     header nav ul {
         flex-direction: column;
     }
-
     header nav ul li {
         margin: 10px 0;
     }
 
+    /* Botões sociais em coluna */
+    .botoes {
+        flex-direction: column;
+        width: 100%;
+    }
+    .botoes a {
+        width: 90%;
+        justify-content: center;
+    }
+
+    /* Cards ocupam quase toda a largura */
     .card-container {
         flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 90%;
+    }
+
+    /* Formulário ocupa toda a largura possível */
+    .formulario form {
+        width: 90%;
     }
 }

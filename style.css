@@ -451,3 +451,47 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+/* === FORMULÁRIO DE CONTATO === */
+.secao-formulario {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.form-contato {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-contato textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-contato button {
+  padding: 12px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-contato button:hover {
+  background-color: #555;
+}

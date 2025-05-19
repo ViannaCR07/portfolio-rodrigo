@@ -45,7 +45,7 @@
 </section>
 <section class="formulario" data-aos="fade-right">
 <h2>Envie uma mensagem</h2>
-<form id="formContato" onsubmit="return enviarMensagem()">
+<form id="form-contato" onsubmit="enviarEmail(event)">
 <input name="nome" placeholder="Seu nome" required="" type="text"/>
 <input name="email" placeholder="Seu e-mail" required="" type="email"/>
 <textarea name="mensagem" placeholder="Sua mensagem" required=""></textarea>
@@ -57,18 +57,6 @@
 <p>© 2025 Rodrigo Viana - Todos os direitos reservados.</p>
 </footer>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-        AOS.init();
-
-        function enviarMensagem() {
-            document.getElementById('feedback').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('feedback').style.display = 'none';
-                document.getElementById('formContato').reset();
-            }, 3000);
-            return false;
-        }
-    </script>
 
 <section class="secao-formulario">
 <h2>Entre em Contato</h2>
@@ -80,11 +68,24 @@
 <p id="mensagem-sucesso" style="display:none;color:green;">Mensagem enviada com sucesso!</p>
 </form>
 </section>
+
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-function enviarMensagem(event) {
-  event.preventDefault();
-  document.getElementById('mensagem-sucesso').style.display = 'block';
-}
+  (function(){
+    emailjs.init("ekuX5B0MEFrjNItVH");
+  })();
+
+  function enviarEmail(event) {
+    event.preventDefault();
+    emailjs.sendForm("service_k6427qd", "template_oz3d948", document.getElementById("form-contato"))
+      .then(function() {
+        document.getElementById('mensagem-sucesso').style.display = 'block';
+      }, function(error) {
+        alert("Erro ao enviar: " + JSON.stringify(error));
+      });
+  }
 </script>
 </body>
 </html>

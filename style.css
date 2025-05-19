@@ -410,3 +410,28 @@ body.dark-mode {
 .dark-mode .sobre-itens .item ul {
   color: #ccc;
 }
+
+
+/* ===== MELHORIAS MOBILE RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .hero img {
+    width: 120px;
+    height: 120px;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  .sobre-itens {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

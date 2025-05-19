@@ -44,7 +44,16 @@
             color: #444;
         }
     </style>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/></head>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DMQZLZTLMD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-DMQZLZTLMD');
+</script>
+</head>
 <body>
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 <script>
@@ -74,5 +83,21 @@
 </iframe>
 </section>
 </main>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init();</script></body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init();</script>
+<div class="cookie-banner" id="cookie-banner">
+  Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade.
+  <button onclick="aceitarCookies()">Entendi</button>
+</div>
+<script>
+  function aceitarCookies() {
+    document.getElementById("cookie-banner").style.display = "none";
+    localStorage.setItem("cookies_aceitos", "sim");
+  }
+  window.onload = function () {
+    if (localStorage.getItem("cookies_aceitos") !== "sim") {
+      document.getElementById("cookie-banner").style.display = "block";
+    }
+  };
+</script>
+</body>
 </html>

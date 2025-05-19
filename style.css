@@ -572,3 +572,12 @@ main {
 footer {
   margin-top: auto;
 }
+
+/* === AJUSTE FINAL DE CENTRALIZAÇÃO PARA CONTATO === */
+.container-contato {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}

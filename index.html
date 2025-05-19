@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="style.css">
     <!-- AOS Animate On Scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- AOS Animate On Scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 
 <body>
@@ -33,32 +38,32 @@
 </header>
 
     <!-- SEÇÃO HERO -->
-    <section class="hero" data-aos="fade-up">
+    <section class="hero" data-aos="fade-down" data-aos="fade-up">
         <img src="img/minha-foto.jpeg" alt="Foto Rodrigo Viana">
         <h1>Rodrigo Viana</h1>
         <p>25 anos - São Paulo-SP - Analista de dados jr. Experiências com BI, Automação em Python, Processos Operacionais e Logísticos.</p>
     </section>
 
     <!-- SEÇÃO SOBRE -->
-    <section class="sobre" data-aos="fade-right">
+    <section class="sobre" data-aos="fade-right" data-aos="fade-right">
         <h2>Sobre Mim</h2>
         <p>Sou formado em Gestão da Qualidade e atualmente estou Pós graduando Ciência de dados. Atuo como Analista de Dados com foco em Business Intelligence, automações em Python e otimização de processos operacionais logísticos. Já desenvolvi dashboards em Power BI, scripts de ETL para MySQL e sistemas integrados usando APIs.</p>
     </section>
 
     <!-- SEÇÃO PROJETOS -->
-    <section class="projetos" data-aos="fade-right">
+    <section class="projetos" data-aos="fade-up" data-aos="fade-right">
         <h2>Projetos em Destaque</h2>
         <div class="card-container">
 
             <!-- Card 1 -->
-            <div class="card">
+            <div class="card" data-aos="zoom-in">
                 <img src="img/logos/python.png" alt="Python">
                 <h3>Automação Python</h3>
                 <p>Projetos de ETL, análise de dados e automação de processos usando Python.</p>
             </div>
 
             <!-- Card 2: Power BI -->
-            <div class="card">
+            <div class="card" data-aos="zoom-in">
                 <img src="img/logos/dashboard.png" alt="Dashboard Power BI">
                 <h3>Dashboard Power BI</h3>
                 <p>Dashboards interativos com indicadores estratégicos e operacionais.</p>
@@ -66,14 +71,14 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="card">
+            <div class="card" data-aos="zoom-in">
                 <img src="img/logos/javascript.png" alt="JavaScript">
                 <h3>Integrações Web</h3>
                 <p>Integração de APIs e sistemas web.</p>
             </div>
 
             <!-- Card 4 -->
-            <div class="card">
+            <div class="card" data-aos="zoom-in">
                 <img src="img/logos/streamlit.png" alt="Dashboard em Python Streamlit">
                 <h3>Dashboard em Python Streamlit</h3>
                 <p>Dashboard interativo com dados simulados de entregadores: KPIs operacionais, gráficos dinâmicos e ranking de performance.</p>
@@ -95,6 +100,10 @@
         AOS.init();
     </script>
 
+
+<script>
+  AOS.init();
+</script>
 </body>
 
 </html>

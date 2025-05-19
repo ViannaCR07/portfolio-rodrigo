@@ -514,3 +514,22 @@ body {
 footer {
   margin-top: 40px;
 }
+
+/* === ÍCONES DE CONTATO === */
+.contato-icones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.contato-icones img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s;
+}
+
+.contato-icones img:hover {
+  transform: scale(1.1);
+}

@@ -581,3 +581,9 @@ footer {
   align-items: center;
   padding: 20px;
 }
+
+/* Ajuste para título da seção de projetos no dark mode */
+.dark-mode .projetos h2 {
+  color: #ffffff; /* ou um cinza claro como #f4f4f4 */
+}
+

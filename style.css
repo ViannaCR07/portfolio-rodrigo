@@ -533,3 +533,14 @@ footer {
 .contato-icones img:hover {
   transform: scale(1.1);
 }
+
+/* === ESTRUTURA FLEX PARA O BODY E RODAPÉ === */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}

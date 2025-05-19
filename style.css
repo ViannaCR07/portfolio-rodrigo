@@ -316,8 +316,11 @@ body.dark-mode {
 .toggle-container button:hover {
     background-color: #0f172a;
 }
+/* ==== DARK MODE FIM ==== */
 
-/* Ajuste específico para modo escuro na seção HERO */
+
+
+/* ==== Ajustes para modo escuro na hero ==== */
 .dark-mode .hero {
     background-color: #121212;
     color: #f4f4f4;
@@ -329,4 +332,19 @@ body.dark-mode {
     color: #dddddd;
 }
 
-/* ==== DARK MODE FIM ==== */
+/* ==== Botão Dark Mode mais elegante ==== */
+.toggle-container button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1f2937;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.toggle-container button:hover {
+    background-color: #0f172a;
+    transform: scale(1.05);
+}

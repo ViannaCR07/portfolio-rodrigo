@@ -14,7 +14,6 @@
 </head>
 <body>
 <header>
-
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 <script>
             function toggleMenu() {
@@ -70,5 +69,22 @@
             return false;
         }
     </script>
+
+<section class="secao-formulario">
+<h2>Entre em Contato</h2>
+<form class="form-contato" onsubmit="enviarMensagem(event)">
+<input name="nome" placeholder="Seu nome" required="" type="text"/>
+<input name="email" placeholder="Seu e-mail" required="" type="email"/>
+<textarea name="mensagem" placeholder="Sua mensagem" required=""></textarea>
+<button type="submit">Enviar Mensagem</button>
+<p id="mensagem-sucesso" style="display:none;color:green;">Mensagem enviada com sucesso!</p>
+</form>
+</section>
+<script>
+function enviarMensagem(event) {
+  event.preventDefault();
+  document.getElementById('mensagem-sucesso').style.display = 'block';
+}
+</script>
 </body>
 </html>

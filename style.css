@@ -240,3 +240,40 @@ footer {
         width: 90%;
     }
 }
+
+
+/* ==== Inclusões Modernas ==== */
+
+/* ===== Classe para botões padrão ===== */
+.btn {
+  display: inline-block;
+  background-color: #1f2937;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.btn:hover {
+  background-color: #111827;
+  transform: translateY(-2px);
+}
+
+/* ===== Ajustes modernos no menu ===== */
+header nav {
+  background-color: #111827;
+  padding: 1rem 2rem;
+}
+header nav ul li a {
+  color: #e5e7eb;
+  font-weight: 500;
+}
+header nav ul li a:hover {
+  color: #ffffff;
+}
+
+/* ===== Suavização no hover dos cards ===== */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

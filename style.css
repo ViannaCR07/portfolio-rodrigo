@@ -495,3 +495,22 @@ nav a:hover {
 .form-contato button:hover {
   background-color: #555;
 }
+
+/* === AJUSTE DE ESPAÇAMENTO NO CONTATO === */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #f4f4f4;
+}
+
+.secao-formulario {
+  padding: 40px 20px 20px;
+  margin: 0 auto;
+  max-width: 600px;
+  background-color: transparent;
+}
+
+footer {
+  margin-top: 40px;
+}

@@ -1,50 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contato - Rodrigo Viana</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="img/logos/favicon.ico" type="image/x-icon" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contato - Rodrigo Viana</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="img/logos/favicon.ico" rel="icon" type="image/x-icon"/>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="relatorios.html">Relatórios</a></li>
-      <li><a href="contato.html" class="ativo">Contato</a></li>
-      <li><a href="curriculo.html">Currículo</a></li>
-    </ul>
-  </nav>
-
-  <main class="container-contato">
-    <div class="contato-conteudo">
-      <div class="contato-icones">
-        <a href="https://wa.me/SEUNUMERO" target="_blank">
-          <img src="img/logos/whatsapp.png" alt="WhatsApp" />
-        </a>
-        <a href="mailto:seuemail@gmail.com">
-          <img src="img/logos/gmail.png" alt="Gmail" />
-        </a>
-      </div>
-
-      <h2>Entre em Contato</h2>
-      <form id="form-contato" onsubmit="enviarEmail(event)">
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu e-mail" required>
-        <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-        <button type="submit">Enviar Mensagem</button>
-        <p id="mensagem-sucesso" style="display:none;color:green;">Mensagem enviada com sucesso!</p>
-      </form>
-    </div>
-  </main>
-
-  <footer>
+<nav>
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="relatorios.html">Relatórios</a></li>
+<li><a class="ativo" href="contato.html">Contato</a></li>
+<li><a href="curriculo.html">Currículo</a></li>
+</ul>
+</nav>
+<main class="formulario">
+<div class="contato-conteudo">
+<div class="contato-icones">
+<a href="https://wa.me/SEUNUMERO" target="_blank">
+<img alt="WhatsApp" src="img/logos/whatsapp.png"/>
+</a>
+<a href="mailto:seuemail@gmail.com">
+<img alt="Gmail" src="img/logos/gmail.png"/>
+</a>
+</div>
+<h2>Entre em Contato</h2>
+<form class="form-contato" id="form-contato" onsubmit="enviarEmail(event)">
+<input name="nome" placeholder="Seu nome" required="" type="text"/>
+<input name="email" placeholder="Seu e-mail" required="" type="email"/>
+<textarea name="mensagem" placeholder="Sua mensagem" required=""></textarea>
+<button type="submit">Enviar Mensagem</button>
+<p id="mensagem-sucesso" style="display:none;color:green;">Mensagem enviada com sucesso!</p>
+</form>
+</div>
+</main>
+<footer>
     © 2025 Rodrigo Viana - Todos os direitos reservados.
   </footer>
-
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
     (function(){
       emailjs.init("ekuX5B0MEFrjNItVH");
     })();

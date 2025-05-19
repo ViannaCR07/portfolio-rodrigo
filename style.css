@@ -277,3 +277,43 @@ header nav ul li a:hover {
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
+
+/* ==== DARK MODE INÍCIO ==== */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+.dark-mode header nav {
+    background-color: #1f1f1f;
+}
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
+.dark-mode .btn {
+    background-color: #333333;
+    color: #fff;
+}
+.dark-mode footer {
+    background-color: #1f1f1f;
+    color: #ddd;
+}
+.toggle-container {
+    text-align: center;
+    margin: 20px 0;
+}
+.toggle-container button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1f2937;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+.toggle-container button:hover {
+    background-color: #0f172a;
+}
+/* ==== DARK MODE FIM ==== */

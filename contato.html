@@ -21,9 +21,14 @@
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
-    </header>
+    
+<div class="toggle-container" style="position: absolute; top: 20px; right: 20px;">
+  <button onclick="document.body.classList.toggle('dark-mode')">🌙</button>
+</div>
 
-    <section class="hero" data-aos="fade-up">
+</header>
+
+    <section class="hero" data-aos="fade-down" data-aos="fade-up">
         <h1>Entre em Contato</h1>
         <p>Fique à vontade para me chamar diretamente pelo WhatsApp ou enviar um E-mail.</p>
 
@@ -37,7 +42,7 @@
         </div>
     </section>
 
-    <section class="formulario" data-aos="fade-right">
+    <section class="formulario" data-aos="fade-up" data-aos="fade-right">
         <h2>Envie uma mensagem</h2>
         <form id="formContato" onsubmit="return enviarMensagem()">
             <input type="text" name="nome" placeholder="Seu nome" required>

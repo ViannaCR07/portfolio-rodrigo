@@ -348,3 +348,30 @@ body.dark-mode {
     background-color: #0f172a;
     transform: scale(1.05);
 }
+
+
+
+/* === FORMULÁRIO DARK MODE === */
+.dark-mode .formulario {
+    background-color: #1a1a1a;
+}
+.dark-mode .formulario h2 {
+    color: #fff;
+}
+.dark-mode .formulario input,
+.dark-mode .formulario textarea {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #444;
+}
+.dark-mode .formulario input::placeholder,
+.dark-mode .formulario textarea::placeholder {
+    color: #aaa;
+}
+.dark-mode .formulario button {
+    background-color: #333;
+    color: #fff;
+}
+.dark-mode .formulario button:hover {
+    background-color: #555;
+}

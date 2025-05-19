@@ -3,79 +3,166 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículo - Rodrigo Viana</title>
-  <link rel="stylesheet" href="style_completo_sobre.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: #121212;
+      color: #e4e4e4;
+    }
+    nav {
+      background-color: #111827;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.2rem;
+    }
+    h3 {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      color: #444;
+    }
+    .dark-mode h3 {
+      color: #ccc;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .section {
+      background-color: #fff;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+    }
+    .dark-mode .section {
+      background-color: #1f1f1f;
+    }
+    .btn-download {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: #1f2937;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    .btn-download:hover {
+      background-color: #0f172a;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #111827;
+      color: #fff;
+    }
+    .toggle-container {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .toggle-container button {
+      padding: 6px 12px;
+      background-color: #1f2937;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
-<header>
   <nav>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="relatorios.html">Relatórios</a></li>
-      <li><a href="contato.html">Contato</a></li>
-      <li><a href="curriculo.html">Currículo</a></li>
-    </ul>
+    <a href="index.html">Início</a>
+    <a href="relatorios.html">Relatórios</a>
+    <a href="contato.html">Contato</a>
+    <a href="curriculo.html">Currículo</a>
   </nav>
-</header>
 
-<div class="toggle-container" style="position: absolute; top: 20px; right: 20px;">
-  <button onclick="document.body.classList.toggle('dark-mode')">🌙</button>
-</div>
+  <div class="toggle-container">
+    <button onclick="document.body.classList.toggle('dark-mode')">🌙</button>
+  </div>
 
-<main style="padding: 2rem;">
-  <section data-aos="fade-down">
-    <h1>Rodrigo Viana Rocha</h1>
-    <p>📍 São Paulo - SP | 📧 rodrigovianarocha@hotmail.com | 📞 (11) 97868-1580</p>
-  </section>
+  <div class="container">
+    <section class="section">
+      <h1>Rodrigo Viana Rocha</h1>
+      <p>📍 São Paulo - SP | 📧 rodrigovianarocha@hotmail.com | 📞 (11) 97868-1580</p>
+    </section>
 
-  <section data-aos="fade-up" class="sobre-itens">
-    <div class="item">
+    <section class="section">
       <h3>🧑‍💼 Experiência Profissional</h3>
       <ul>
-        <li><strong>Analista de Dados – CR EXPRESS</strong><br>03/2025 – atual</li>
-        <li><strong>Assistente Administrativo – CR EXPRESS</strong><br>12/2021 – 03/2025</li>
-        <li><strong>Aprendiz em Qualidade – CONCREJATO</strong><br>01/2020 – 06/2021</li>
+        <li><strong>Analista de Dados – CR EXPRESS</strong> (03/2025 – atual)</li>
+        <li><strong>Assistente Administrativo – CR EXPRESS</strong> (12/2021 – 03/2025)</li>
+        <li><strong>Aprendiz em Qualidade – CONCREJATO</strong> (01/2020 – 06/2021)</li>
       </ul>
-    </div>
-    <div class="item">
+    </section>
+
+    <section class="section">
       <h3>🎓 Formação Acadêmica</h3>
       <ul>
-        <li>Pós-graduação em Ciência de Dados – São Judas (em andamento)</li>
+        <li>Pós em Ciência de Dados – São Judas (em andamento)</li>
         <li>CST Gestão da Qualidade – Estácio (conclui em 12/2024)</li>
         <li>Técnico em Qualidade – SENAI (concluído em 06/2021)</li>
       </ul>
-    </div>
-    <div class="item">
+    </section>
+
+    <section class="section">
       <h3>📜 Cursos & Certificações</h3>
       <ul>
-        <li>Google Data Analytics</li>
-        <li>Python, SQL, Power BI (Avançado)</li>
-        <li>Looker Studio, Tableau, Excel, R, JavaScript</li>
+        <li>Google Data Analytics (Coursera)</li>
+        <li>Python, SQL, Power BI (avançado)</li>
+        <li>Looker Studio, Tableau, Excel, R, JS</li>
       </ul>
-    </div>
-    <div class="item">
+    </section>
+
+    <section class="section">
       <h3>🛠️ Habilidades Técnicas</h3>
       <p>🐍 Python | 💾 SQL | 📊 Power BI | 📈 DAX | 🌐 HTML/CSS | ☁️ GCP</p>
-    </div>
-    <div class="item">
+    </section>
+
+    <section class="section">
       <h3>🌍 Idiomas</h3>
-      <p>Português (Nativo) | Inglês (Básico) | Espanhol (Básico)</p>
-    </div>
-    <div class="item">
+      <p>Português (Nativo), Inglês (Básico), Espanhol (Básico)</p>
+    </section>
+
+    <section class="section">
       <h3>📥 Baixar Currículo PDF</h3>
-      <a class="btn" href="Currículo_Profissional%20(3).pdf" target="_blank" download>📄 Download do Currículo</a>
-    </div>
-  </section>
-</main>
+      <a class="btn-download" href="Currículo_Profissional%20(3).pdf" download target="_blank">Download do Currículo</a>
+    </section>
+  </div>
 
-<footer>
-  <p>&copy; 2025 Rodrigo Viana - Todos os direitos reservados.</p>
-</footer>
+  <footer>
+    &copy; 2025 Rodrigo Viana - Todos os direitos reservados.
+  </footer>
 
-<script>AOS.init();</script>
 </body>
 </html>

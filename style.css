@@ -587,3 +587,9 @@ footer {
   color: #ffffff; /* ou um cinza claro como #f4f4f4 */
 }
 
+
+
+/* === Correção para seção Projetos no Dark Mode === */
+.dark-mode .projetos {
+  background-color: #1a1a1a;
+}

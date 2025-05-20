@@ -25,7 +25,6 @@
 </script>
 </head>
 <body>
-<div id="info-clima" style="font-size: 0.9em; text-align: center; background-color: #f0f0f0; padding: 10px; color: #333;"></div>
 <!-- MENU -->
 <header>
 <nav>
@@ -34,10 +33,13 @@
 <a href="contato.html">Contato</a>
 <a href="curriculo.html">Currículo</a>
 </nav>
-<div class="toggle-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
-<button onclick="toggleDarkMode()">🌙</button>
+<div class="toggle-container" style="position: fixed; top: 20px; right: 20px; z-index: 1001;">
+<button onclick="document.body.classList.toggle('dark-mode')">🌙</button>
 </div>
 </header>
+<div id="clima-widget" style="position: absolute; top: 80px; right: 20px; background: #ffffffcc; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 10px 15px; font-size: 0.95em; color: #333; min-width: 180px; z-index: 1000; text-align: center;">
+<span id="info-clima">Carregando clima...</span>
+</div>
 <!-- SEÇÃO HERO -->
 <section class="hero" data-aos="fade-up">
 <img alt="Foto Rodrigo Viana" src="img/minha-foto.jpeg"/>
@@ -129,18 +131,6 @@
   };
 </script>
 <script>
-  // Restaurar preferência de modo escuro ao carregar
-  if (localStorage.getItem("modo_escuro") === "true") {
-    document.body.classList.add("dark-mode");
-  }
-
-  // Alternar e salvar preferência
-  function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem("modo_escuro", document.body.classList.contains("dark-mode"));
-  }
-</script>
-<script>
   async function carregarClima() {
     const apiKey = "2da4bf5e9a144f4992bb745f5fdcde88";
     const cidade = "São Paulo";
@@ -154,11 +144,13 @@
       const icone = data.weather[0].icon;
 
       document.getElementById("info-clima").innerHTML = `
-        📍 <strong>${cidade}</strong> - <img src="https://openweathermap.org/img/wn/${icone}.png" alt="${condicao}" style="vertical-align: middle;"> 
-        <strong>${temp}°C</strong> - ${condicao.charAt(0).toUpperCase() + condicao.slice(1)}
+        <strong>${cidade}</strong><br>
+        <img src="https://openweathermap.org/img/wn/${icone}.png" alt="${condicao}" style="vertical-align: middle;"> 
+        <strong>${temp}°C</strong><br>
+        <span style="font-size: 0.85em;">${condicao.charAt(0).toUpperCase() + condicao.slice(1)}</span>
       `;
     } catch (err) {
-      console.log("Erro ao carregar clima:", err);
+      document.getElementById("info-clima").innerText = "Erro ao carregar clima";
     }
   }
 

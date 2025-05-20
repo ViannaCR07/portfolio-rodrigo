@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
-<head><link href="style.css" rel="stylesheet"/>
+<head><link rel="stylesheet" href="style.css">
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Portfólio de Rodrigo Viana - BI, Python, Dados e Análises." name="description"/>
@@ -11,107 +11,9 @@
 <link href="img/logos/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 <!-- AOS Animate On Scroll -->
 <!-- AOS Animate On Scroll -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DMQZLZTLMD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-DMQZLZTLMD');
-</script>
-</head>
-<body>
-<!-- MENU -->
-<header>
-<nav>
-<a href="index.html">Início</a>
-<a href="relatorios.html">Relatórios</a>
-<a href="contato.html">Contato</a>
-<a href="curriculo.html">Currículo</a>
-</nav>
-<div class="toggle-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
-<button onclick="document.body.classList.toggle('dark-mode')">🌙</button>
-</div>
-</header>
-<div id="clima-widget" style="position: absolute; top: 80px; right: 20px; background: #ffffffcc; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 10px 15px; font-size: 0.95em; color: #333; min-width: 180px; z-index: 1000; text-align: center;">
-<span id="info-clima">Carregando clima...</span>
-</div>
-<!-- SEÇÃO HERO -->
-<section class="hero" data-aos="fade-up">
-<img alt="Foto Rodrigo Viana" src="img/minha-foto.jpeg"/>
-<h1>Rodrigo Viana</h1>
-<p>25 anos | São Paulo-SP | Analista de dados. Experiências com BI, Automação em Python, Processos Operacionais e Logísticos.</p>
-</section>
-<!-- SEÇÃO SOBRE -->
-<section class="sobre" data-aos="fade-right">
-<h2>Sobre Mim</h2>
-<p>Sou formado em Gestão da Qualidade, pós graduando em ciência de dados. Atuo como Analista de Dados com foco em Business Intelligence, automações e melhoria de processos.</p>
-<div class="sobre-itens">
-<div class="item">
-<h3>🛠️ Tecnologias</h3>
-<ul>
-<li>Python (pandas, openpyxl, requests)</li>
-<li>Power BI e DAX</li>
-<li>MySQL e automações ETL</li>
-<li>HTML, CSS, JavaScript básico</li>
-</ul>
-</div>
-<div class="item">
-<h3>🎯 Objetivo Profissional</h3>
-<p>Atuar em equipes de dados ou operações que utilizam tecnologia para gerar valor e tomar decisões com base em indicadores claros.</p>
-</div>
-<div class="item">
-<h3>🧑‍🏫 Experiência Operacional</h3>
-<p>Experiência em logística, atendimento e operação. Já atuei no SAC, operação logística e dados, criando dashboards de performance e automações.</p>
-</div>
-</div>
-</section>
-<!-- SEÇÃO PROJETOS -->
-<section class="projetos" data-aos="fade-right">
-<h2>Projetos em Destaque</h2>
-<div class="card-container">
-<!-- Card 1 -->
-<div class="card" data-aos="zoom-in">
-<img alt="Python" src="img/logos/python.png"/>
-<h3>Automação Python</h3>
-<p>Projetos de ETL, análise de dados e automação de processos usando Python.</p>
-</div>
-<!-- Card 2: Power BI -->
-<div class="card" data-aos="zoom-in">
-<img alt="Dashboard Power BI" src="img/logos/dashboard.png"/>
-<h3>Dashboard Power BI</h3>
-<p>Dashboards interativos com indicadores estratégicos e operacionais.</p>
-<a class="btn" href="relatorios.html" target="_blank">🌐 Ver Relatório</a>
-</div>
-<!-- Card 3 -->
-<div class="card" data-aos="zoom-in">
-<img alt="JavaScript" src="img/logos/javascript.png"/>
-<h3>Integrações Web</h3>
-<p>Integração de APIs e sistemas web.</p>
-</div>
-<!-- Card 4 -->
-<div class="card" data-aos="zoom-in">
-<img alt="Dashboard em Python Streamlit" src="img/logos/streamlit.png"/>
-<h3>Dashboard em Python Streamlit</h3>
-<p>Dashboard interativo com dados simulados de entregadores: KPIs operacionais, gráficos dinâmicos e ranking de performance.</p>
-<a href="https://dashboard-entregadores-rqt4cwr9mfqgv5esqxslzj.streamlit.app/" target="_blank">🌐 Ver Projeto</a><br/>
-<a href="https://github.com/ViannaCR07/dashboard-entregadores" target="_blank">💻 Ver Código no GitHub</a>
-</div>
-</div>
-</section>
-<!-- RODAPÉ -->
-<footer>
-<p>© 2025 Rodrigo Viana - Todos os direitos reservados.</p>
-</footer>
-<!-- Scripts AOS -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-        AOS.init();
-    </script>
-<script>
-  AOS.init();
-</script>
+
+
+
 <div class="cookie-banner" id="cookie-banner">
   Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade.
   <button onclick="aceitarCookies()">Entendi</button>
@@ -153,5 +55,16 @@
 
   window.onload = carregarClima;
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+    if (localStorage.getItem("modo_escuro") === "true") {
+      document.body.classList.add("dark-mode");
+    }
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      localStorage.setItem("modo_escuro", document.body.classList.contains("dark-mode"));
+    }
+  </script>
 </body>
 </html>

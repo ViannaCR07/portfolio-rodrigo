@@ -25,11 +25,15 @@
 </script>
 </head>
 <body>
-<div id="info-clima" style="font-size: 0.9em; text-align: center; background-color: #f0f0f0; padding: 10px; color: #333;"></div>
 <!-- MENU -->
 <header>
-
-
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<script>
+            function toggleMenu() {
+                var nav = document.querySelector('nav ul');
+                nav.classList.toggle('active');
+            }
+            </script>
 <nav>
 <a href="index.html">Início</a>
 <a href="relatorios.html">Relatórios</a>
@@ -37,7 +41,7 @@
 <a href="curriculo.html">Currículo</a>
 </nav>
 <div class="toggle-container" style="position: absolute; top: 20px; right: 20px;">
-<button onclick="toggleDarkMode()">🌙</button>
+<button onclick="document.body.classList.toggle('dark-mode')">🌙</button>
 </div>
 </header>
 <!-- SEÇÃO HERO -->
@@ -129,42 +133,6 @@
       document.getElementById("cookie-banner").style.display = "block";
     }
   };
-</script>
-<script>
-  // Restaurar preferência de modo escuro ao carregar
-  if (localStorage.getItem("modo_escuro") === "true") {
-    document.body.classList.add("dark-mode");
-  }
-
-  // Alternar e salvar preferência
-  function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem("modo_escuro", document.body.classList.contains("dark-mode"));
-  }
-</script>
-<script>
-  async function carregarClima() {
-    const apiKey = "2da4bf5e9a144f4992bb745f5fdcde88";
-    const cidade = "São Paulo";
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&units=metric&lang=pt_br`;
-
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      const temp = Math.round(data.main.temp);
-      const condicao = data.weather[0].description;
-      const icone = data.weather[0].icon;
-
-      document.getElementById("info-clima").innerHTML = `
-        📍 <strong>${cidade}</strong> - <img src="https://openweathermap.org/img/wn/${icone}.png" alt="${condicao}" style="vertical-align: middle;"> 
-        <strong>${temp}°C</strong> - ${condicao.charAt(0).toUpperCase() + condicao.slice(1)}
-      `;
-    } catch (err) {
-      console.log("Erro ao carregar clima:", err);
-    }
-  }
-
-  window.onload = carregarClima;
 </script>
 </body>
 </html>

@@ -656,3 +656,27 @@ section {
   font-weight: bold;
   cursor: pointer;
 }
+
+/* Hover suave no menu */
+nav a {
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #00bfff;
+}
+
+/* Suavização nos botões */
+button, .btn, .form-contato button {
+  transition: all 0.3s ease;
+}
+button:hover, .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Fixar dark mode button */
+.toggle-container {
+  position: fixed !important;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}

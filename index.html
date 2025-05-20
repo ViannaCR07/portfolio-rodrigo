@@ -26,16 +26,10 @@
 </head>
 <body>
 <div id="info-clima" style="font-size: 0.9em; text-align: center; background-color: #f0f0f0; padding: 10px; color: #333;"></div>
-
 <!-- MENU -->
 <header>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-<script>
-            function toggleMenu() {
-                var nav = document.querySelector('nav ul');
-                nav.classList.toggle('active');
-            }
-            </script>
+
+
 <nav>
 <a href="index.html">Início</a>
 <a href="relatorios.html">Relatórios</a>
@@ -148,7 +142,6 @@
     localStorage.setItem("modo_escuro", document.body.classList.contains("dark-mode"));
   }
 </script>
-
 <script>
   async function carregarClima() {
     const apiKey = "2da4bf5e9a144f4992bb745f5fdcde88";

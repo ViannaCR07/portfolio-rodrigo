@@ -33,7 +33,7 @@
 <div class="toggle-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
 <button onclick="document.body.classList.toggle('dark-mode')">🌙</button>
 </div>
-</header>
+</header><div class="weather-card" id="weather">Carregando clima...</div>
 <div id="clima-widget" style="position: absolute; top: 80px; right: 20px; background: #ffffffcc; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 10px 15px; font-size: 0.95em; color: #333; min-width: 180px; z-index: 1000; text-align: center;">
 <span id="info-clima">Carregando clima...</span>
 </div>
@@ -152,6 +152,27 @@
   }
 
   window.onload = carregarClima;
+</script>
+
+<script>
+  const API_KEY = "2da4bf5e9a144f4992bb745f5fdcde88";
+  const weatherCard = document.getElementById("weather");
+  fetch("https://api.openweathermap.org/data/2.5/weather?q=Sao Paulo,BR&appid=" + API_KEY + "&units=metric&lang=pt_br")
+    .then(response => response.json())
+    .then(data => {
+      const temp = Math.round(data.main.temp);
+      const cidade = data.name;
+      const descricao = data.weather[0].description;
+      const icone = data.weather[0].icon;
+      weatherCard.innerHTML = `
+        <span><strong>${cidade}</strong></span>
+        <span class="temp">${temp}°C</span>
+        <span>${descricao.charAt(0).toUpperCase() + descricao.slice(1)}</span>
+      `;
+    })
+    .catch(() => {
+      weatherCard.innerHTML = "Erro ao carregar clima.";
+    });
 </script>
 </body>
 </html>

@@ -680,3 +680,46 @@ button:hover, .btn:hover {
   right: 20px;
   z-index: 9999;
 }
+
+/* ===== MOBILE MENU + DARKMODE AJUSTE ===== */
+@media (max-width: 768px) {
+  nav {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .toggle-container {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 9999;
+  }
+
+  .weather-card {
+    position: fixed;
+    top: 60px;
+    right: 12px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-size: 0.9rem;
+    z-index: 9998;
+    width: 150px;
+  }
+
+  .dark-mode .weather-card {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+  }
+
+  .weather-card span {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .weather-card .temp {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}

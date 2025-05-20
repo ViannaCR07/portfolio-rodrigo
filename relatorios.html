@@ -72,7 +72,7 @@
 <h1>Relatórios Power BI</h1>
 <a href="index.html">← Voltar para o Portfólio</a>
 <div class="toggle-container" style="position: absolute; top: 20px; right: 20px;">
-<button onclick="document.body.classList.toggle('dark-mode')">🌙</button>
+<button onclick="toggleDarkMode()">🌙</button>
 </div>
 </header>
 <main>
@@ -98,6 +98,19 @@
       document.getElementById("cookie-banner").style.display = "block";
     }
   };
+</script>
+
+<script>
+  // Restaurar preferência de modo escuro ao carregar
+  if (localStorage.getItem("modo_escuro") === "true") {
+    document.body.classList.add("dark-mode");
+  }
+
+  // Alternar e salvar preferência
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("modo_escuro", document.body.classList.contains("dark-mode"));
+  }
 </script>
 </body>
 </html>

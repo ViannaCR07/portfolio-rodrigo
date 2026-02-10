@@ -1,106 +1,69 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-<head><link href="style.css" rel="stylesheet"/>
-<link href="favicon.ico" rel="icon" type="image/x-icon"/>
-<meta charset="utf-8"/>
-<title>Relatórios Power BI - Rodrigo Viana</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f5f5f5;
-        }
-        header {
-            background: #1f2937;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        header a {
-            color: #ccc;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 0.5rem;
-        }
-        main {
-            padding: 2rem;
-            text-align: center;
-        }
-        .relatorio-embed iframe {
-            max-width: 100%;
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-        }
-        .relatorio-embed h2 {
-            margin-bottom: 0.5rem;
-        }
-        .relatorio-embed p {
-            margin-bottom: 1.5rem;
-            color: #444;
-        }
-    </style>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-DMQZLZTLMD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-DMQZLZTLMD');
-</script>
-</head>
-<body>
-<nav>
-<a href="index.html">Início</a>
-<a href="relatorios.html">Relatórios</a>
-<a href="contato.html">Contato</a>
-<a href="curriculo.html">Currículo</a>
-</nav>
-<header>
-<h1>Relatórios Power BI</h1>
-<a href="index.html">← Voltar para o Portfólio</a>
-<div class="toggle-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
-<button onclick="toggleDarkMode()">🌙</button>
-</div>
-</header>
-<main>
-<section class="relatorio-embed">
-<h2>Dashboard Exemplo</h2>
-<p>Visualize os principais indicadores de desempenho operacional(Dados simulados com NumPy).</p>
-<iframe allowfullscreen="true" height="600" src="https://app.powerbi.com/reportEmbed?reportId=84e34bb0-d590-4204-b706-2086468ddf98&autoAuth=true&ctid=f310b526-e195-4805-a55e-67e28f2fefdb" title="Dashboard Exemplo" width="100%">
-</iframe>
-</section>
-</main>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init();</script>
-<div class="cookie-banner" id="cookie-banner">
-  Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade.
-  <button onclick="aceitarCookies()">Entendi</button>
-</div>
-<script>
-  function aceitarCookies() {
-    document.getElementById("cookie-banner").style.display = "none";
-    localStorage.setItem("cookies_aceitos", "sim");
-  }
-  window.onload = function () {
-    if (localStorage.getItem("cookies_aceitos") !== "sim") {
-      document.getElementById("cookie-banner").style.display = "block";
-    }
-  };
-</script>
-<script>
-  // Restaurar preferência de modo escuro ao carregar
-  if (localStorage.getItem("modo_escuro") === "true") {
-    document.body.classList.add("dark-mode");
-  }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="reports_page_title">Relatórios Power BI - Rodrigo Viana</title>
+  <link rel="icon" type="image/x-icon" href="img/logos/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
 
-  // Alternar e salvar preferência
-  function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem("modo_escuro", document.body.classList.contains("dark-mode"));
-  }
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DMQZLZTLMD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-DMQZLZTLMD');
+  </script>
+</head>
+<body data-page="reports">
+  <header>
+    <nav>
+      <a href="index.html" data-i18n="nav_home">Início</a>
+      <a href="relatorios.html" data-i18n="nav_reports">Relatórios</a>
+      <a href="contato.html" data-i18n="nav_contact">Contato</a>
+      <a href="curriculo.html" data-i18n="nav_resume">Currículo</a>
+    </nav>
+    <div class="toggle-container">
+      <button type="button" data-lang-toggle aria-label="Alternar idioma">EN</button>
+      <button type="button" data-theme-toggle aria-label="Alternar tema">Tema</button>
+    </div>
+  </header>
+
+  <main class="relatorios-main" data-aos="fade-up">
+    <section class="section relatorio-embed">
+      <h1 data-i18n="reports_title">Relatórios Power BI</h1>
+      <p data-i18n="reports_desc">Visualize os principais indicadores de desempenho operacional (dados simulados com NumPy).</p>
+      <iframe
+        title="Dashboard Exemplo"
+        width="100%"
+        height="600"
+        allowfullscreen="true"
+        src="https://app.powerbi.com/reportEmbed?reportId=84e34bb0-d590-4204-b706-2086468ddf98&autoAuth=true&ctid=f310b526-e195-4805-a55e-67e28f2fefdb">
+      </iframe>
+      <a class="btn" href="index.html" data-i18n="reports_back">Voltar para o Portfólio</a>
+    </section>
+  </main>
+
+  <footer>
+    <p data-i18n="footer_copy">© 2026 Rodrigo Viana - Todos os direitos reservados.</p>
+  </footer>
+
+  <div id="cookie-banner" class="cookie-banner">
+    <span data-i18n="cookie_text">Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade.</span>
+    <button type="button" data-accept-cookies data-i18n="cookie_btn">Entendi</button>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/common.js?v=6"></script>
 </body>
 </html>
+
+
+
+
+
+

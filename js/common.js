@@ -23,7 +23,7 @@
       hero_desc: '25 anos | São Paulo-SP | Profissional com experiência em logística, análise de dados, automação de processos e desenvolvimento de dashboards em Power BI.',
       hero_btn_reports: 'Ver Relatórios',
       hero_btn_resume: 'Ver Currículo',
-      kpi_1_title: '6+ anos',
+      kpi_1_title: '5+ anos',
       kpi_1_desc: 'em logística e dados',
       kpi_2_title: 'Power BI',
       kpi_2_desc: 'dashboards operacionais',

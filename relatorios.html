@@ -3,155 +3,48 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Relatórios e dashboards de Rodrigo Viana Rocha." />
-  <meta name="keywords" content="Power BI, Dashboard, Relatórios, Rodrigo Viana Rocha, Portfólio" />
-  <meta name="author" content="Rodrigo Viana Rocha" />
-  <title data-i18n="reports_meta_title">Relatórios | Rodrigo Viana</title>
-
-  <link rel="shortcut icon" type="image/x-icon" href="img/logos/favicon.ico" />
+  <title data-i18n="reports_page_title">Relatórios Power BI - Rodrigo Viana</title>
+  <link rel="icon" type="image/x-icon" href="img/logos/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="style.css" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DMQZLZTLMD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-DMQZLZTLMD');
+  </script>
 </head>
 <body data-page="reports">
-  <header class="site-header">
-    <div class="header-shell">
-      <a href="index.html" class="brand">RVR</a>
-
-      <nav>
-        <a href="index.html" data-i18n="nav_home">Início</a>
-        <a href="relatorios.html" data-i18n="nav_reports">Relatórios</a>
-        <a href="contato.html" data-i18n="nav_contact">Contato</a>
-        <a href="curriculo.html" data-i18n="nav_resume">Currículo</a>
-      </nav>
-
-      <div class="toggle-container">
-        <button type="button" data-lang-toggle aria-label="Alternar idioma">EN</button>
-        <button type="button" data-theme-toggle aria-label="Alternar tema">Tema</button>
-      </div>
+  <header>
+    <nav>
+      <a href="index.html" data-i18n="nav_home">Início</a>
+      <a href="relatorios.html" data-i18n="nav_reports">Relatórios</a>
+      <a href="contato.html" data-i18n="nav_contact">Contato</a>
+      <a href="curriculo.html" data-i18n="nav_resume">Currículo</a>
+    </nav>
+    <div class="toggle-container">
+      <button type="button" data-lang-toggle aria-label="Alternar idioma">EN</button>
+      <button type="button" data-theme-toggle aria-label="Alternar tema">Tema</button>
     </div>
   </header>
 
-  <main class="reports-page">
-    <section class="reports-hero" data-aos="fade-up">
-      <div class="reports-hero-copy">
-        <span class="hero-tag">Dashboard em destaque</span>
-        <h1 data-i18n="reports_title">Relatórios e Dashboards</h1>
-        <p data-i18n="reports_desc">
-          Painéis com foco em leitura operacional, indicadores estratégicos e visualização clara para apoiar tomada de decisão.
-        </p>
-
-        <div class="hero-badges">
-          <span class="badge">Power BI</span>
-          <span class="badge">KPIs</span>
-          <span class="badge">Dados Operacionais</span>
-          <span class="badge">Performance</span>
-        </div>
-
-        <div class="hero-actions">
-          <a class="btn" href="#dashboard">Ver Dashboard</a>
-          <a class="btn btn-ghost" href="index.html">Voltar ao Início</a>
-        </div>
-      </div>
-
-      <div class="reports-hero-card" data-aos="zoom-in">
-        <span class="mini-tag">Visão geral</span>
-        <h2>Dashboard de acompanhamento operacional</h2>
-        <p>
-          Estrutura visual pensada para destacar métricas-chave, apoiar leitura rápida e organizar indicadores em um formato executivo e objetivo.
-        </p>
-
-        <div class="reports-stats">
-          <article>
-            <strong>KPIs</strong>
-            <span>monitoramento em tempo real</span>
-          </article>
-          <article>
-            <strong>BI</strong>
-            <span>visual limpo e direto</span>
-          </article>
-          <article>
-            <strong>Dados</strong>
-            <span>análise com foco operacional</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="reports-summary" data-aos="fade-up">
-      <article class="summary-card">
-        <span class="mini-tag">Objetivo</span>
-        <h3>Leitura rápida da operação</h3>
-        <p>
-          Organizar indicadores essenciais em uma visualização acessível, clara e útil para acompanhamento de performance.
-        </p>
-      </article>
-
-      <article class="summary-card">
-        <span class="mini-tag">Aplicação</span>
-        <h3>Uso em contexto real</h3>
-        <p>
-          Estrutura adequada para ambientes de logística, operações, produtividade, acompanhamento de times e monitoramento de resultados.
-        </p>
-      </article>
-
-      <article class="summary-card">
-        <span class="mini-tag">Visual</span>
-        <h3>Mais apresentação, menos ruído</h3>
-        <p>
-          Página desenhada para apresentar o dashboard como case profissional, e não apenas como um embed isolado.
-        </p>
-      </article>
-    </section>
-
-    <section class="dashboard-showcase" id="dashboard" data-aos="fade-up">
-      <div class="section-heading">
-        <span class="section-eyebrow">Case</span>
-        <h2>Dashboard Interativo</h2>
-        <p>
-          Abaixo está a visualização incorporada do relatório. O bloco foi redesenhado para gerar mais impacto visual e reforçar a percepção de projeto profissional.
-        </p>
-      </div>
-
-      <div class="dashboard-shell">
-        <div class="dashboard-shell-top">
-          <div>
-            <span class="mini-tag">Power BI Embed</span>
-            <h3>Painel operacional</h3>
-          </div>
-
-          <a class="btn btn-ghost" href="index.html">Voltar</a>
-        </div>
-
-        <div class="dashboard-frame-wrap">
-          <iframe
-            title="Dashboard Power BI"
-            src="https://app.powerbi.com/view?r=eyJrIjoiNWY0M2I4NjEtMzYxMy00OTg3LWI0M2UtY2M0ODkwYjM2ZWVhIiwidCI6ImMzMzRmNjRiLTMyNzQtNDU1Ni1iY2QwLTM4NmYxODBiYjZjNSJ9"
-            frameborder="0"
-            allowfullscreen="true">
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-    <section class="reports-bottom-grid" data-aos="fade-up">
-      <article class="bottom-card">
-        <span class="mini-tag">Destaque</span>
-        <h3>Hierarquia visual melhorada</h3>
-        <p>
-          A página foi organizada para contextualizar o dashboard antes da visualização, melhorando experiência e apresentação.
-        </p>
-      </article>
-
-      <article class="bottom-card">
-        <span class="mini-tag">Percepção</span>
-        <h3>Mais cara de portfólio premium</h3>
-        <p>
-          O objetivo aqui é fazer o recrutador perceber valor logo de cara: não só ver um painel, mas entender que é um projeto sério.
-        </p>
-      </article>
+  <main class="relatorios-main" data-aos="fade-up">
+    <section class="section relatorio-embed">
+      <h1 data-i18n="reports_title">Relatórios Power BI</h1>
+      <p data-i18n="reports_desc">Visualize os principais indicadores de desempenho operacional (dados simulados com NumPy).</p>
+      <iframe
+        title="Dashboard Exemplo"
+        width="100%"
+        height="600"
+        allowfullscreen="true"
+        src="https://app.powerbi.com/reportEmbed?reportId=84e34bb0-d590-4204-b706-2086468ddf98&autoAuth=true&ctid=f310b526-e195-4805-a55e-67e28f2fefdb">
+      </iframe>
+      <a class="btn" href="index.html" data-i18n="reports_back">Voltar para o Portfólio</a>
     </section>
   </main>
 
@@ -160,19 +53,17 @@
   </footer>
 
   <div id="cookie-banner" class="cookie-banner">
-    <span data-i18n="cookie_text">
-      Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade.
-    </span>
+    <span data-i18n="cookie_text">Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade.</span>
     <button type="button" data-accept-cookies data-i18n="cookie_btn">Entendi</button>
   </div>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
-  </script>
   <script src="js/common.js?v=6"></script>
 </body>
 </html>
+
+
+
+
+
+

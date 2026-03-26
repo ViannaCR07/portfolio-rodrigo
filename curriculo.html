@@ -3,112 +3,150 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="resume_page_title">Currículo - Rodrigo Viana</title>
+  <title>Currículo - Rodrigo Viana</title>
+
   <link rel="icon" type="image/x-icon" href="img/logos/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DMQZLZTLMD"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-DMQZLZTLMD');
   </script>
 </head>
+
 <body data-page="resume">
-  <header>
-    <nav>
-      <a href="index.html" data-i18n="nav_home">Início</a>
-      <a href="relatorios.html" data-i18n="nav_reports">Relatórios</a>
-      <a href="contato.html" data-i18n="nav_contact">Contato</a>
-      <a href="curriculo.html" data-i18n="nav_resume">Currículo</a>
-    </nav>
-    <div class="toggle-container">
-      <button type="button" data-lang-toggle aria-label="Alternar idioma">EN</button>
-      <button type="button" data-theme-toggle aria-label="Alternar tema">Tema</button>
-    </div>
-  </header>
 
-  <main class="container" data-aos="fade-up">
-    <section class="section">
-      <h1 data-i18n="hero_name">Rodrigo Viana Rocha</h1>
-      <p data-i18n="resume_contact_line">25 anos | São Paulo - SP | rodrigor.vianna07@gmail.com | (11) 97868-1580</p>
-    </section>
+<header>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="relatorios.html">Relatórios</a>
+    <a href="contato.html">Contato</a>
+    <a href="curriculo.html">Currículo</a>
+  </nav>
 
-    <section class="section">
-      <h3 data-i18n="resume_summary_title">Resumo Profissional</h3>
-      <p data-i18n="resume_summary_desc">Experiência em logística, análise de dados e automação de processos, com desenvolvimento de dashboards em Power BI e atuação próxima às áreas operacionais e de gestão para suportar decisões orientadas por dados.</p>
-    </section>
-
-    <section class="section">
-      <h3 data-i18n="resume_exp_title">Experiência Profissional</h3>
-      <ul>
-        <li data-i18n="resume_exp_1"><strong>Analista de Logística - Refit (Refinaria)</strong> (07/2025 - 03/2026)</li>
-        <li data-i18n="resume_exp_2">Programação de rotas, acompanhamento de frota e controle de transportadoras para otimização de custos e prazos.</li>
-        <li data-i18n="resume_exp_3"><strong>Analista de Logística (Dados) - CR Express(ifood)</strong> (03/2025 - 07/2025)</li>
-        <li data-i18n="resume_exp_4">Criação de relatórios e dashboards no Power BI para performance operacional e tomada de decisão.</li>
-        <li data-i18n="resume_exp_5">Integração e tratamento de dados com ETL em MySQL, além de suporte técnico aos times operacionais.</li>
-        <li data-i18n="resume_exp_6"><strong>Assistente de Logística (Dados) - CR Express(ifood)</strong> (12/2021 - 03/2025)</li>
-        <li data-i18n="resume_exp_7">Relatórios visuais de supply hours e performance logística, com análises comparativas de metas e resultados.</li>
-        <li data-i18n="resume_exp_8"><strong>Aprendiz em Qualidade - CONCREJATO</strong> (01/2020 - 06/2021)</li>
-        <li data-i18n="resume_exp_9">Apoio em auditorias, inspeções de conformidade e controle documental com foco em qualidade e rastreabilidade.</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h3 data-i18n="resume_edu_title">Formação Acadêmica</h3>
-      <ul>
-        <li data-i18n="resume_edu_1">MBA em Gestão, Logística e Operações Internacionais - Estácio (conclusão prevista: 11/2026)</li>
-        <li data-i18n="resume_edu_2">MBA em Gestão Estratégica de Processos - Universidade São Judas Tadeu (concluído em 12/2025)</li>
-        <li data-i18n="resume_edu_3">Graduação em Gestão da Qualidade - Estácio (concluído em 12/2024)</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h3 data-i18n="resume_courses_title">Cursos e Certificações</h3>
-      <ul>
-        <li data-i18n="resume_course_1">Google Data Analytics - Google (EAD)</li>
-        <li data-i18n="resume_course_2">Data Science - Alura (EAD)</li>
-        <li data-i18n="resume_course_3">Assistente de Gestão da Qualidade - Estácio (EAD)</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h3 data-i18n="resume_skills_title">Habilidades Técnicas</h3>
-      <p data-i18n="resume_skills_desc">Power BI (DAX), SQL, Python, MySQL, Streamlit, Looker Studio, Tableau, Excel, PowerPoint, Word, Canva, Planilhas Google, Linguagem R, JavaScript, Google Cloud.</p>
-    </section>
-
-    <section class="section">
-      <h3 data-i18n="resume_lang_title">Idiomas</h3>
-      <p data-i18n="resume_lang_desc">Português (Nativo), Inglês (Básico - leitura técnica).</p>
-    </section>
-
-    <section class="section">
-      <h3 data-i18n="resume_download_title">Baixar Currículo PDF</h3>
-      <a class="btn btn-download" href="curriculo-rodrigo-viana.pdf" target="_blank" rel="noopener noreferrer" download data-i18n="resume_download_btn">Download do Currículo</a>
-    </section>
-  </main>
-
-  <footer>
-    <p data-i18n="footer_copy">© 2026 Rodrigo Viana - Todos os direitos reservados.</p>
-  </footer>
-
-  <div id="cookie-banner" class="cookie-banner">
-    <span data-i18n="cookie_text">Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade.</span>
-    <button type="button" data-accept-cookies data-i18n="cookie_btn">Entendi</button>
+  <div class="toggle-container">
+    <button type="button" data-lang-toggle>EN</button>
+    <button type="button" data-theme-toggle>Tema</button>
   </div>
+</header>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/common.js?v=6"></script>
+<main class="container" data-aos="fade-up">
+
+  <!-- HEADER -->
+  <section class="section">
+    <h1>Rodrigo Viana Rocha</h1>
+    <p>25 anos | São Paulo - SP | rodrigor.vianna07@gmail.com | (11) 97868-1580</p>
+  </section>
+
+  <!-- RESUMO -->
+  <section class="section">
+    <h3>Resumo Profissional</h3>
+    <p>
+      Analista de Logística com atuação em planejamento de demanda, abastecimento e análise de dados aplicada à operação.
+      Experiência em gestão de estoques, roteirização e performance logística, com foco em eficiência operacional e
+      prevenção de rupturas. Forte utilização de Power BI, SQL e automação de processos para suporte à tomada de decisão.
+    </p>
+  </section>
+
+  <!-- EXPERIÊNCIA -->
+  <section class="section">
+    <h3>Experiência Profissional</h3>
+    <ul>
+      <li><strong>Analista de Logística - Refit (Refinaria)</strong> (07/2025 - 03/2026)</li>
+      <li>Planejamento de demanda, programação de abastecimento e gestão de estoques.</li>
+      <li>Monitoramento de frota, validação de cargas e integração com áreas operacionais.</li>
+
+      <li><strong>Analista de Dados - CR Express (iFood)</strong> (03/2025 - 07/2025)</li>
+      <li>Desenvolvimento de dashboards em Power BI e automações com Python e SQL.</li>
+      <li>Análise de performance e suporte estratégico às operações.</li>
+
+      <li><strong>Assistente de Logística - CR Express (iFood)</strong> (12/2021 - 03/2025)</li>
+      <li>Relatórios operacionais, análise de metas e apoio na automação de processos.</li>
+
+      <li><strong>Aprendiz em Qualidade - Concrejato</strong> (01/2020 - 06/2021)</li>
+      <li>Apoio em auditorias, controle documental e indicadores de qualidade.</li>
+    </ul>
+  </section>
+
+  <!-- FORMAÇÃO -->
+  <section class="section">
+    <h3>Formação Acadêmica</h3>
+    <ul>
+      <li>MBA em Gestão, Logística e Operações Internacionais - Estácio (conclusão prevista: 11/2026)</li>
+      <li>MBA em Gestão Estratégica de Processos - São Judas (concluído em 12/2025)</li>
+      <li>Graduação em Gestão da Qualidade - Estácio (concluído em 12/2024)</li>
+    </ul>
+  </section>
+
+  <!-- CURSOS -->
+  <section class="section">
+    <h3>Cursos e Certificações</h3>
+    <ul>
+      <li>Google Data Analytics - Google</li>
+      <li>Data Science - Alura</li>
+      <li>Assistente de Gestão da Qualidade - Estácio</li>
+    </ul>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section class="section">
+    <h3>Habilidades Técnicas</h3>
+    <p>
+      Power BI (Avançado), SQL (Avançado), Excel (Avançado), Python (Intermediário),
+      Looker Studio (Intermediário), JavaScript (Intermediário), Tableau (Básico),
+      Linguagem R (Básico), TMS (TOTVS e KMM), Google Cloud.
+    </p>
+  </section>
+
+  <!-- IDIOMAS -->
+  <section class="section">
+    <h3>Idiomas</h3>
+    <p>Português (Nativo), Inglês (A2 - leitura técnica).</p>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="section">
+    <h3>Currículo Completo</h3>
+    <p>
+      Para mais detalhes sobre experiências, projetos e resultados, acesse a versão completa do currículo em PDF.
+    </p>
+
+    <a class="btn btn-download"
+       href="curriculo-rodrigo-viana.pdf"
+       target="_blank"
+       rel="noopener noreferrer"
+       download>
+      Download do Currículo
+    </a>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Rodrigo Viana - Todos os direitos reservados.</p>
+</footer>
+
+<!-- COOKIE -->
+<div id="cookie-banner" class="cookie-banner">
+  <span>Este site utiliza cookies para melhorar sua experiência.</span>
+  <button type="button" data-accept-cookies>Entendi</button>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script src="js/common.js?v=6"></script>
+
 </body>
 </html>
-
-
-
-
-
-

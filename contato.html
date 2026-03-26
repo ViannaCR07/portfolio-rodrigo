@@ -1,47 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Rodrigo Viana</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="contact_page_title">Contato - Rodrigo Viana</title>
+
+  <link rel="icon" type="image/x-icon" href="img/logos/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DMQZLZTLMD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-DMQZLZTLMD');
+  </script>
 </head>
 
-<body>
+<body data-page="contact">
 
-    <header>
-        <h1>Contato</h1>
-        <p class="subtitle">Vamos conversar sobre oportunidades ou projetos</p>
-    </header>
+  <!-- HEADER ORIGINAL MANTIDO -->
+  <header>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="relatorios.html">Relatórios</a>
+      <a href="contato.html">Contato</a>
+      <a href="curriculo.html">Currículo</a>
+    </nav>
 
-    <main class="container">
+    <div class="toggle-container">
+      <button type="button" data-lang-toggle>EN</button>
+      <button type="button" data-theme-toggle>Tema</button>
+    </div>
+  </header>
 
-        <section class="contact-card">
-            <h2>Entre em contato</h2>
+  <!-- MAIN MELHORADO -->
+  <main class="formulario" data-aos="fade-up">
 
-            <form>
+    <!-- HEADER DA PÁGINA -->
+    <section class="section" style="text-align: center;">
+      <h1>Vamos conversar</h1>
+      <p style="color: var(--muted); max-width: 520px; margin: 10px auto 0;">
+        Aberto a oportunidades, projetos e conexões na área de logística, dados e tecnologia.
+      </p>
+    </section>
 
-                <div class="form-group">
-                    <label>Nome</label>
-                    <input type="text" placeholder="Seu nome">
-                </div>
+    <!-- ÍCONES (AGORA COMO CARDS) -->
+    <section class="section">
+      <div class="contato-icones">
 
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="seu@email.com">
-                </div>
+        <a href="https://wa.me/5511978681580" target="_blank" class="icon-card">
+          <img src="img/logos/whatsapp.png" alt="WhatsApp">
+          <span>WhatsApp</span>
+        </a>
 
-                <div class="form-group">
-                    <label>Mensagem</label>
-                    <textarea rows="5" placeholder="Digite sua mensagem..."></textarea>
-                </div>
+        <a href="mailto:rodrigor.vianna07@gmail.com" class="icon-card">
+          <img src="img/logos/gmail.png" alt="Email">
+          <span>Email</span>
+        </a>
 
-                <button type="submit">Enviar mensagem</button>
+        <a href="https://www.linkedin.com/in/rodrigo-viana-845944164" target="_blank" class="icon-card">
+          <img src="img/logos/linkedin.png" alt="LinkedIn">
+          <span>LinkedIn</span>
+        </a>
 
-            </form>
-        </section>
+      </div>
+    </section>
 
-    </main>
+    <!-- FORMULÁRIO -->
+    <section class="section">
+      <form id="form-contato" class="form-contato">
+
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+
+        <button type="submit">Enviar Mensagem</button>
+
+        <p id="mensagem-sucesso" class="mensagem-sucesso" hidden>
+          Mensagem enviada com sucesso!
+        </p>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER MANTIDO -->
+  <footer>
+    <p>© 2026 Rodrigo Viana - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- COOKIE MANTIDO -->
+  <div id="cookie-banner" class="cookie-banner">
+    <span>Este site utiliza cookies para melhorar sua experiência.</span>
+    <button type="button" data-accept-cookies>Entendi</button>
+  </div>
+
+  <!-- SCRIPTS MANTIDOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="js/common.js?v=6"></script>
+  <script src="js/contact.js?v=5"></script>
 
 </body>
 </html>

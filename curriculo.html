@@ -3,150 +3,262 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Currículo - Rodrigo Viana</title>
+  <meta name="description" content="Currículo de Rodrigo Viana Rocha." />
+  <meta name="keywords" content="Currículo, Rodrigo Viana Rocha, BI, Python, SQL, Power BI, Logística" />
+  <meta name="author" content="Rodrigo Viana Rocha" />
+  <title data-i18n="resume_meta_title">Currículo | Rodrigo Viana</title>
 
-  <link rel="icon" type="image/x-icon" href="img/logos/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="img/logos/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DMQZLZTLMD"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DMQZLZTLMD');
-  </script>
 </head>
-
 <body data-page="resume">
+  <header class="site-header">
+    <div class="header-shell">
+      <a href="index.html" class="brand">RVR</a>
 
-<header>
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="relatorios.html">Relatórios</a>
-    <a href="contato.html">Contato</a>
-    <a href="curriculo.html">Currículo</a>
-  </nav>
+      <nav>
+        <a href="index.html" data-i18n="nav_home">Início</a>
+        <a href="relatorios.html" data-i18n="nav_reports">Relatórios</a>
+        <a href="contato.html" data-i18n="nav_contact">Contato</a>
+        <a href="curriculo.html" data-i18n="nav_resume">Currículo</a>
+      </nav>
 
-  <div class="toggle-container">
-    <button type="button" data-lang-toggle>EN</button>
-    <button type="button" data-theme-toggle>Tema</button>
+      <div class="toggle-container">
+        <button type="button" data-lang-toggle aria-label="Alternar idioma">EN</button>
+        <button type="button" data-theme-toggle aria-label="Alternar tema">Tema</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="resume-page">
+    <section class="resume-hero" data-aos="fade-up">
+      <div class="resume-hero-main">
+        <span class="hero-tag">Perfil profissional</span>
+        <h1>Rodrigo Viana Rocha</h1>
+        <p class="resume-lead">
+          Profissional com experiência em logística, operações, análise de dados, automação de processos e construção de dashboards para apoio à tomada de decisão.
+        </p>
+
+        <div class="hero-badges">
+          <span class="badge">Power BI</span>
+          <span class="badge">Python</span>
+          <span class="badge">SQL</span>
+          <span class="badge">ETL</span>
+          <span class="badge">Logística</span>
+          <span class="badge">Operações</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn" href="contato.html">Entrar em Contato</a>
+          <a class="btn btn-ghost" href="index.html">Voltar ao Portfólio</a>
+        </div>
+      </div>
+
+      <aside class="resume-profile-card" data-aos="zoom-in">
+        <span class="mini-tag">Resumo</span>
+        <h2>Dados aplicados à operação</h2>
+        <p>
+          Atuação conectando rotina operacional, indicadores e tecnologia para gerar controle, produtividade e melhor leitura da performance.
+        </p>
+
+        <div class="resume-mini-stats">
+          <article>
+            <strong>5+</strong>
+            <span>anos de experiência</span>
+          </article>
+          <article>
+            <strong>BI</strong>
+            <span>dashboards e análise</span>
+          </article>
+          <article>
+            <strong>Ops</strong>
+            <span>visão de processo</span>
+          </article>
+        </div>
+      </aside>
+    </section>
+
+    <section class="resume-contact-strip" data-aos="fade-up">
+      <article class="contact-pill">
+        <span class="mini-tag">Cidade</span>
+        <h3>São Paulo - SP</h3>
+      </article>
+
+      <article class="contact-pill">
+        <span class="mini-tag">Email</span>
+        <h3>seuemail@exemplo.com</h3>
+      </article>
+
+      <article class="contact-pill">
+        <span class="mini-tag">GitHub</span>
+        <h3>github.com/ViannaCR07</h3>
+      </article>
+
+      <article class="contact-pill">
+        <span class="mini-tag">LinkedIn</span>
+        <h3>linkedin.com/in/rodrigo-viana</h3>
+      </article>
+    </section>
+
+    <section class="resume-grid" data-aos="fade-up">
+      <div class="resume-column">
+        <article class="resume-card">
+          <span class="section-eyebrow">Resumo</span>
+          <h2>Sobre mim</h2>
+          <p>
+            Graduado em Gestão da Qualidade, com MBAs em Gestão Estratégica de Processos e em Gestão, Logística e Operações Internacionais. Tenho experiência em operação, atendimento, logística e dados, atuando com foco em automação, leitura de indicadores e melhoria contínua.
+          </p>
+        </article>
+
+        <article class="resume-card">
+          <span class="section-eyebrow">Competências</span>
+          <h2>Habilidades principais</h2>
+
+          <div class="skills-cloud">
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>OpenPyXL</span>
+            <span>SQL</span>
+            <span>Power BI</span>
+            <span>DAX</span>
+            <span>ETL</span>
+            <span>Dashboards</span>
+            <span>Automação</span>
+            <span>KPIs</span>
+            <span>Excel</span>
+            <span>JavaScript</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Logística</span>
+            <span>Operações</span>
+          </div>
+        </article>
+
+        <article class="resume-card">
+          <span class="section-eyebrow">Formação</span>
+          <h2>Formação acadêmica</h2>
+
+          <div class="education-list">
+            <div class="education-item">
+              <span class="mini-tag">MBA</span>
+              <h3>Gestão, Logística e Operações Internacionais</h3>
+              <p>Especialização com foco em cadeia operacional, logística e gestão aplicada.</p>
+            </div>
+
+            <div class="education-item">
+              <span class="mini-tag">MBA</span>
+              <h3>Gestão Estratégica de Processos</h3>
+              <p>Ênfase em melhoria contínua, eficiência operacional e visão sistêmica de processos.</p>
+            </div>
+
+            <div class="education-item">
+              <span class="mini-tag">Graduação</span>
+              <h3>Gestão da Qualidade</h3>
+              <p>Base sólida em indicadores, padronização, processos e análise de desempenho.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="resume-column">
+        <article class="resume-card">
+          <span class="section-eyebrow">Experiência</span>
+          <h2>Experiência profissional</h2>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-content">
+                <span class="mini-tag">Atual / mais recente</span>
+                <h3>Analista / Atuação em Dados e Operações</h3>
+                <strong>Logística / Operação / BI</strong>
+                <p>
+                  Atuação com acompanhamento operacional, desenvolvimento de análises, construção de dashboards e apoio à tomada de decisão através de indicadores.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-content">
+                <span class="mini-tag">Experiência anterior</span>
+                <h3>Operação Logística / Atendimento / Processos</h3>
+                <strong>Ambiente operacional</strong>
+                <p>
+                  Experiência em rotinas operacionais, suporte, acompanhamento de processos e interação com áreas críticas do fluxo logístico.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-content">
+                <span class="mini-tag">Evolução</span>
+                <h3>Transição para dados e automação</h3>
+                <strong>Foco analítico</strong>
+                <p>
+                  Consolidação de atuação em automações, ETL, criação de relatórios e estruturação de informações para leitura gerencial.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="resume-card">
+          <span class="section-eyebrow">Diferenciais</span>
+          <h2>O que entrego</h2>
+
+          <div class="delivery-list">
+            <div class="delivery-item">
+              <h3>Leitura operacional clara</h3>
+              <p>Transformação de dados em indicadores úteis para monitoramento e tomada de decisão.</p>
+            </div>
+
+            <div class="delivery-item">
+              <h3>Automação de rotinas</h3>
+              <p>Redução de esforço manual com scripts, integrações e organização de fluxos ETL.</p>
+            </div>
+
+            <div class="delivery-item">
+              <h3>Visão de processo</h3>
+              <p>Interpretação do dado dentro do contexto real da operação, com foco em eficiência.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="resume-card">
+          <span class="section-eyebrow">Objetivo</span>
+          <h2>Próximo passo profissional</h2>
+          <p>
+            Busco oportunidades em dados, BI, operações ou áreas correlatas, onde eu possa unir visão analítica, conhecimento operacional e tecnologia para gerar impacto real no negócio.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p data-i18n="footer_copy">© 2026 Rodrigo Viana - Todos os direitos reservados.</p>
+  </footer>
+
+  <div id="cookie-banner" class="cookie-banner">
+    <span data-i18n="cookie_text">
+      Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade.
+    </span>
+    <button type="button" data-accept-cookies data-i18n="cookie_btn">Entendi</button>
   </div>
-</header>
 
-<main class="container" data-aos="fade-up">
-
-  <!-- HEADER -->
-  <section class="section">
-    <h1>Rodrigo Viana Rocha</h1>
-    <p>25 anos | São Paulo - SP | rodrigor.vianna07@gmail.com | (11) 97868-1580</p>
-  </section>
-
-  <!-- RESUMO -->
-  <section class="section">
-    <h3>Resumo Profissional</h3>
-    <p>
-      Analista de Logística com atuação em planejamento de demanda, abastecimento e análise de dados aplicada à operação.
-      Experiência em gestão de estoques, roteirização e performance logística, com foco em eficiência operacional e
-      prevenção de rupturas. Forte utilização de Power BI, SQL e automação de processos para suporte à tomada de decisão.
-    </p>
-  </section>
-
-  <!-- EXPERIÊNCIA -->
-  <section class="section">
-    <h3>Experiência Profissional</h3>
-    <ul>
-      <li><strong>Analista de Logística - Refit (Refinaria)</strong> (07/2025 - 03/2026)</li>
-      <li>Planejamento de demanda, programação de abastecimento e gestão de estoques.</li>
-      <li>Monitoramento de frota, validação de cargas e integração com áreas operacionais.</li>
-
-      <li><strong>Analista de Dados - CR Express (iFood)</strong> (03/2025 - 07/2025)</li>
-      <li>Desenvolvimento de dashboards em Power BI e automações com Python e SQL.</li>
-      <li>Análise de performance e suporte estratégico às operações.</li>
-
-      <li><strong>Assistente de Logística - CR Express (iFood)</strong> (12/2021 - 03/2025)</li>
-      <li>Relatórios operacionais, análise de metas e apoio na automação de processos.</li>
-
-      <li><strong>Aprendiz em Qualidade - Concrejato</strong> (01/2020 - 06/2021)</li>
-      <li>Apoio em auditorias, controle documental e indicadores de qualidade.</li>
-    </ul>
-  </section>
-
-  <!-- FORMAÇÃO -->
-  <section class="section">
-    <h3>Formação Acadêmica</h3>
-    <ul>
-      <li>MBA em Gestão, Logística e Operações Internacionais - Estácio (conclusão prevista: 11/2026)</li>
-      <li>MBA em Gestão Estratégica de Processos - São Judas (concluído em 12/2025)</li>
-      <li>Graduação em Gestão da Qualidade - Estácio (concluído em 12/2024)</li>
-    </ul>
-  </section>
-
-  <!-- CURSOS -->
-  <section class="section">
-    <h3>Cursos e Certificações</h3>
-    <ul>
-      <li>Google Data Analytics - Google</li>
-      <li>Data Science - Alura</li>
-      <li>Assistente de Gestão da Qualidade - Estácio</li>
-    </ul>
-  </section>
-
-  <!-- HABILIDADES -->
-  <section class="section">
-    <h3>Habilidades Técnicas</h3>
-    <p>
-      Power BI (Avançado), SQL (Avançado), Excel (Avançado), Python (Intermediário),
-      Looker Studio (Intermediário), JavaScript (Intermediário), Tableau (Básico),
-      Linguagem R (Básico), TMS (TOTVS e KMM), Google Cloud.
-    </p>
-  </section>
-
-  <!-- IDIOMAS -->
-  <section class="section">
-    <h3>Idiomas</h3>
-    <p>Português (Nativo), Inglês (A2 - leitura técnica).</p>
-  </section>
-
-  <!-- DOWNLOAD -->
-  <section class="section">
-    <h3>Currículo Completo</h3>
-    <p>
-      Para mais detalhes sobre experiências, projetos e resultados, acesse a versão completa do currículo em PDF.
-    </p>
-
-    <a class="btn btn-download"
-       href="curriculo-rodrigo-viana.pdf"
-       target="_blank"
-       rel="noopener noreferrer"
-       download>
-      Download do Currículo
-    </a>
-  </section>
-
-</main>
-
-<footer>
-  <p>© 2026 Rodrigo Viana - Todos os direitos reservados.</p>
-</footer>
-
-<!-- COOKIE -->
-<div id="cookie-banner" class="cookie-banner">
-  <span>Este site utiliza cookies para melhorar sua experiência.</span>
-  <button type="button" data-accept-cookies>Entendi</button>
-</div>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
-<script src="js/common.js?v=6"></script>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+  <script src="js/common.js?v=6"></script>
 </body>
 </html>

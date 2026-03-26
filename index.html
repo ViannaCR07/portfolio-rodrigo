@@ -23,240 +23,112 @@
   </script>
 </head>
 <body data-page="home">
-  <header class="site-header">
-    <div class="header-shell">
-      <a href="index.html" class="brand">RVR</a>
-
-      <nav>
-        <a href="index.html" data-i18n="nav_home">Início</a>
-        <a href="relatorios.html" data-i18n="nav_reports">Relatórios</a>
-        <a href="contato.html" data-i18n="nav_contact">Contato</a>
-        <a href="curriculo.html" data-i18n="nav_resume">Currículo</a>
-      </nav>
-
-      <div class="toggle-container">
-        <button type="button" data-lang-toggle aria-label="Alternar idioma">EN</button>
-        <button type="button" data-theme-toggle aria-label="Alternar tema">Tema</button>
-      </div>
+  <header>
+    <nav>
+      <a href="index.html" data-i18n="nav_home">Início</a>
+      <a href="relatorios.html" data-i18n="nav_reports">Relatórios</a>
+      <a href="contato.html" data-i18n="nav_contact">Contato</a>
+      <a href="curriculo.html" data-i18n="nav_resume">Currículo</a>
+    </nav>
+    <div class="toggle-container">
+      <button type="button" data-lang-toggle aria-label="Alternar idioma">EN</button>
+      <button type="button" data-theme-toggle aria-label="Alternar tema">Tema</button>
     </div>
   </header>
 
-  <main>
-    <section class="hero hero-grid" data-aos="fade-up">
-      <div class="hero-copy">
-        <span class="hero-tag" data-i18n="hero_tag">Logística, Dados e BI</span>
+  <div id="clima-widget" class="clima-widget">
+    <span id="info-clima" data-i18n="weather_loading" aria-live="polite">Carregando clima...</span>
+    <button id="geo-toggle" class="geo-toggle" type="button" data-i18n="weather_use_location">Usar minha localização</button>
+  </div>
 
-        <h1 data-i18n="hero_name">Rodrigo Viana Rocha</h1>
+  <section class="hero" data-aos="fade-up">
+    <img src="img/minha-foto.png" alt="Foto Rodrigo Viana" />
+    <span class="hero-tag" data-i18n="hero_tag">Logística, Dados e BI</span>
+    <h1 data-i18n="hero_name">Rodrigo Viana Rocha</h1>
+    <p data-i18n="hero_desc">25 anos | São Paulo-SP | Profissional com experiência em logística, análise de dados, automação de processos e desenvolvimento de dashboards em Power BI.</p>
+    <div class="hero-actions">
+      <a class="btn" href="relatorios.html" data-i18n="hero_btn_reports">Ver Relatórios</a>
+      <a class="btn btn-ghost" href="curriculo.html" data-i18n="hero_btn_resume">Ver Currículo</a>
+    </div>
+  </section>
 
-        <p class="hero-lead" data-i18n="hero_desc">
-          25 anos | São Paulo-SP | Profissional com experiência em logística, análise de dados, automação de processos e desenvolvimento de dashboards em Power BI.
-        </p>
+  <section class="kpi-strip" data-aos="fade-up">
+    <article class="kpi">
+      <h3 data-i18n="kpi_1_title">5+ anos</h3>
+      <p data-i18n="kpi_1_desc">em logística e dados</p>
+    </article>
+    <article class="kpi">
+      <h3 data-i18n="kpi_2_title">Power BI</h3>
+      <p data-i18n="kpi_2_desc">dashboards operacionais</p>
+    </article>
+    <article class="kpi">
+      <h3 data-i18n="kpi_3_title">Python + SQL</h3>
+      <p data-i18n="kpi_3_desc">ETL e automações</p>
+    </article>
+  </section>
 
-        <div class="hero-badges">
-          <span class="badge">Power BI</span>
-          <span class="badge">Python</span>
-          <span class="badge">SQL</span>
-          <span class="badge">ETL</span>
-          <span class="badge">Logística</span>
-          <span class="badge">Dashboards</span>
-        </div>
+  <section class="sobre" data-aos="fade-right">
+    <h2 data-i18n="about_title">Sobre Mim</h2>
+    <p data-i18n="about_desc">Sou graduado em Gestão da Qualidade, com MBAs em Gestão Estratégica de Processos e em Gestão, Logística e Operações Internacionais. Atuo na interface entre operação e dados para elevar eficiência e controle.</p>
+    <div class="sobre-itens">
+      <div class="item">
+        <h3 data-i18n="tech_title">Tecnologias</h3>
+        <ul>
+          <li data-i18n="tech_1">Python (pandas, openpyxl, requests)</li>
+          <li data-i18n="tech_2">Power BI e DAX</li>
+          <li data-i18n="tech_3">SQL e automações ETL</li>
+          <li data-i18n="tech_4">HTML, CSS, JavaScript</li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3 data-i18n="goal_title">Objetivo Profissional</h3>
+        <p data-i18n="goal_desc">Atuar em equipes de dados ou operações que utilizam tecnologia para gerar valor e tomar decisões com base em indicadores claros.</p>
+      </div>
+      <div class="item">
+        <h3 data-i18n="ops_title">Experiência Operacional</h3>
+        <p data-i18n="ops_desc">Experiência em logística, atendimento e operação. Atuação em SAC, operação logística e dados, criando dashboards e automações.</p>
+      </div>
+    </div>
+  </section>
 
-        <div class="hero-actions">
-          <a class="btn" href="relatorios.html" data-i18n="hero_btn_reports">Ver Relatórios</a>
-          <a class="btn btn-ghost" href="curriculo.html" data-i18n="hero_btn_resume">Ver Currículo</a>
-        </div>
+  <section class="projetos" data-aos="fade-right">
+    <h2 data-i18n="projects_title">Projetos em Destaque</h2>
+    <div class="card-container">
+      <div class="card" data-aos="zoom-in">
+        <img src="img/logos/python.png" alt="Python" />
+        <h3 data-i18n="project_1_title">Automação Python</h3>
+        <p data-i18n="project_1_desc">Projetos de ETL, análise de dados e automação de processos usando Python.</p>
       </div>
 
-      <div class="hero-spotlight" data-aos="zoom-in">
-        <div class="spotlight-glow"></div>
-
-        <div class="profile-card">
-          <div class="profile-card-top">
-            <img src="img/minha-foto.png" alt="Foto Rodrigo Viana" />
-            <div>
-              <span class="profile-kicker">Portfólio Profissional</span>
-              <h2>Dados + Operação + Execução</h2>
-              <p>Projetos com foco em eficiência operacional, automação e leitura clara de indicadores.</p>
-            </div>
-          </div>
-
-          <div class="profile-stats">
-            <article>
-              <strong>5+</strong>
-              <span>anos em operação e dados</span>
-            </article>
-            <article>
-              <strong>BI</strong>
-              <span>visão analítica aplicada</span>
-            </article>
-            <article>
-              <strong>ETL</strong>
-              <span>automações e integrações</span>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="kpi-strip" data-aos="fade-up">
-      <article class="kpi">
-        <span class="kpi-label">Experiência</span>
-        <h3 data-i18n="kpi_1_title">5+ anos</h3>
-        <p data-i18n="kpi_1_desc">em logística e dados</p>
-      </article>
-
-      <article class="kpi">
-        <span class="kpi-label">Especialidade</span>
-        <h3 data-i18n="kpi_2_title">Power BI</h3>
-        <p data-i18n="kpi_2_desc">dashboards operacionais</p>
-      </article>
-
-      <article class="kpi">
-        <span class="kpi-label">Stack</span>
-        <h3 data-i18n="kpi_3_title">Python + SQL</h3>
-        <p data-i18n="kpi_3_desc">ETL e automações</p>
-      </article>
-    </section>
-
-    <section class="sobre section-block" data-aos="fade-up">
-      <div class="section-heading">
-        <span class="section-eyebrow">Perfil</span>
-        <h2 data-i18n="about_title">Sobre Mim</h2>
-        <p data-i18n="about_desc">
-          Sou graduado em Gestão da Qualidade, com MBAs em Gestão Estratégica de Processos e em Gestão, Logística e Operações Internacionais. Atuo na interface entre operação e dados para elevar eficiência e controle.
-        </p>
+      <div class="card" data-aos="zoom-in">
+        <img src="img/logos/dashboard.png" alt="Dashboard Power BI" />
+        <h3 data-i18n="project_2_title">Dashboard Power BI</h3>
+        <p data-i18n="project_2_desc">Dashboards interativos com indicadores estratégicos e operacionais.</p>
+        <a class="btn" href="relatorios.html" target="_blank" rel="noopener noreferrer" data-i18n="project_2_btn">Ver Relatório</a>
       </div>
 
-      <div class="sobre-itens">
-        <div class="item">
-          <span class="mini-tag">Stack</span>
-          <h3 data-i18n="tech_title">Tecnologias</h3>
-          <ul>
-            <li data-i18n="tech_1">Python (pandas, openpyxl, requests)</li>
-            <li data-i18n="tech_2">Power BI e DAX</li>
-            <li data-i18n="tech_3">SQL e automações ETL</li>
-            <li data-i18n="tech_4">HTML, CSS, JavaScript</li>
-          </ul>
-        </div>
-
-        <div class="item">
-          <span class="mini-tag">Foco</span>
-          <h3 data-i18n="goal_title">Objetivo Profissional</h3>
-          <p data-i18n="goal_desc">
-            Atuar em equipes de dados ou operações que utilizam tecnologia para gerar valor e tomar decisões com base em indicadores claros.
-          </p>
-        </div>
-
-        <div class="item">
-          <span class="mini-tag">Vivência</span>
-          <h3 data-i18n="ops_title">Experiência Operacional</h3>
-          <p data-i18n="ops_desc">
-            Experiência em logística, atendimento e operação. Atuação em SAC, operação logística e dados, criando dashboards e automações.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="projetos section-block" data-aos="fade-up">
-      <div class="section-heading">
-        <span class="section-eyebrow">Portfólio</span>
-        <h2 data-i18n="projects_title">Projetos em Destaque</h2>
-        <p>Uma seleção dos trabalhos com maior aderência a BI, automação, dashboards e aplicações analíticas.</p>
+      <div class="card" data-aos="zoom-in">
+        <img src="img/logos/javascript.png" alt="JavaScript" />
+        <h3 data-i18n="project_3_title">Integrações Web</h3>
+        <p data-i18n="project_3_desc">Integração de APIs e sistemas web.</p>
       </div>
 
-      <div class="featured-project" data-aos="fade-up">
-        <div class="featured-visual">
-          <div class="visual-panel">
-            <span class="visual-chip">Projeto em destaque</span>
-            <h3 data-i18n="project_4_title">Dashboard em Python Streamlit</h3>
-            <p data-i18n="project_4_desc">
-              Dashboard interativo com dados simulados de entregadores: KPIs operacionais, gráficos dinâmicos e ranking de performance.
-            </p>
-
-            <div class="tech-stack">
-              <span>Python</span>
-              <span>Streamlit</span>
-              <span>Pandas</span>
-              <span>KPIs</span>
-            </div>
-
-            <div class="hero-actions">
-              <a class="btn" href="https://dashboard-entregadores-rqt4cwr9mfqgv5esqxslzj.streamlit.app/" target="_blank" rel="noopener noreferrer" data-i18n="project_4_btn_demo">Ver Projeto</a>
-              <a class="btn btn-ghost" href="https://github.com/ViannaCR07/dashboard-entregadores" target="_blank" rel="noopener noreferrer" data-i18n="project_4_btn_code">Ver Código no GitHub</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="featured-side">
-          <div class="mini-case">
-            <span class="mini-tag">Resultado</span>
-            <h4>Leitura rápida da operação</h4>
-            <p>Estrutura visual pensada para destacar indicadores, ranking e acompanhamento de desempenho com clareza.</p>
-          </div>
-
-          <div class="mini-case">
-            <span class="mini-tag">Aplicação</span>
-            <h4>Dados com foco operacional</h4>
-            <p>Projeto com apelo forte para contextos de logística, acompanhamento de entregadores e análise de produtividade.</p>
-          </div>
-        </div>
+      <div class="card" data-aos="zoom-in">
+        <img src="img/logos/streamlit.png" alt="Dashboard em Python Streamlit" />
+        <h3 data-i18n="project_4_title">Dashboard em Python Streamlit</h3>
+        <p data-i18n="project_4_desc">Dashboard interativo com dados simulados de entregadores: KPIs operacionais, gráficos dinâmicos e ranking de performance.</p>
+        <a href="https://dashboard-entregadores-rqt4cwr9mfqgv5esqxslzj.streamlit.app/" target="_blank" rel="noopener noreferrer" data-i18n="project_4_btn_demo">Ver Projeto</a><br />
+        <a href="https://github.com/ViannaCR07/dashboard-entregadores" target="_blank" rel="noopener noreferrer" data-i18n="project_4_btn_code">Ver Código no GitHub</a>
       </div>
-
-      <div class="card-container">
-        <article class="card project-card" data-aos="zoom-in">
-          <div class="project-cover cover-1"></div>
-          <div class="project-meta">
-            <span class="mini-tag">Automação</span>
-            <h3 data-i18n="project_1_title">Automação Python</h3>
-            <p data-i18n="project_1_desc">Projetos de ETL, análise de dados e automação de processos usando Python.</p>
-            <div class="tech-stack">
-              <span>Python</span>
-              <span>ETL</span>
-              <span>Automação</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card project-card" data-aos="zoom-in">
-          <div class="project-cover cover-2"></div>
-          <div class="project-meta">
-            <span class="mini-tag">BI</span>
-            <h3 data-i18n="project_2_title">Dashboard Power BI</h3>
-            <p data-i18n="project_2_desc">Dashboards interativos com indicadores estratégicos e operacionais.</p>
-            <div class="tech-stack">
-              <span>Power BI</span>
-              <span>DAX</span>
-              <span>Indicadores</span>
-            </div>
-            <a class="btn card-btn" href="relatorios.html" data-i18n="project_2_btn">Ver Relatório</a>
-          </div>
-        </article>
-
-        <article class="card project-card" data-aos="zoom-in">
-          <div class="project-cover cover-3"></div>
-          <div class="project-meta">
-            <span class="mini-tag">Web</span>
-            <h3 data-i18n="project_3_title">Integrações Web</h3>
-            <p data-i18n="project_3_desc">Integração de APIs e sistemas web.</p>
-            <div class="tech-stack">
-              <span>JavaScript</span>
-              <span>API</span>
-              <span>Integração</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>
     <p data-i18n="footer_copy">© 2026 Rodrigo Viana - Todos os direitos reservados.</p>
   </footer>
 
   <div id="cookie-banner" class="cookie-banner">
-    <span data-i18n="cookie_text">
-      Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade.
-    </span>
+    <span data-i18n="cookie_text">Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade.</span>
     <button type="button" data-accept-cookies data-i18n="cookie_btn">Entendi</button>
   </div>
 
@@ -265,3 +137,9 @@
   <script src="js/home.js?v=6"></script>
 </body>
 </html>
+
+
+
+
+
+

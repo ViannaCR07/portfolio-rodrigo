@@ -1,81 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="contact_page_title">Contato - Rodrigo Viana</title>
-  <link rel="icon" type="image/x-icon" href="img/logos/favicon.ico" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="style.css" />
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DMQZLZTLMD"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-DMQZLZTLMD');
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Rodrigo Viana</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="contact">
-  <header>
-    <nav>
-      <a href="index.html" data-i18n="nav_home">Início</a>
-      <a href="relatorios.html" data-i18n="nav_reports">Relatórios</a>
-      <a href="contato.html" data-i18n="nav_contact">Contato</a>
-      <a href="curriculo.html" data-i18n="nav_resume">Currículo</a>
-    </nav>
-    <div class="toggle-container">
-      <button type="button" data-lang-toggle aria-label="Alternar idioma">EN</button>
-      <button type="button" data-theme-toggle aria-label="Alternar tema">Tema</button>
-    </div>
-  </header>
 
-  <main class="formulario" data-aos="fade-up">
-    <div class="contato-conteudo">
-      <div class="contato-icones">
-        <a href="https://wa.me/5511978681580" target="_blank" rel="noopener noreferrer">
-          <img src="img/logos/whatsapp.png" alt="WhatsApp" />
-        </a>
-        <a href="mailto:rodrigor.vianna07@gmail.com">
-          <img src="img/logos/gmail.png" alt="Gmail" />
-        </a>
-        <a href="https://www.linkedin.com/in/rodrigo-viana-845944164" target="_blank" rel="noopener noreferrer">
-          <img src="img/logos/linkedin.png" alt="LinkedIn" />
-        </a>
-      </div>
-    </div>
+<body>
 
-    <h2 data-i18n="contact_title">Entre em Contato</h2>
-    <form id="form-contato" class="form-contato">
-      <input type="text" name="nome" placeholder="Seu nome" required data-i18n-placeholder="contact_name" />
-      <input type="email" name="email" placeholder="Seu e-mail" required data-i18n-placeholder="contact_email" />
-      <textarea name="mensagem" placeholder="Sua mensagem" required data-i18n-placeholder="contact_message"></textarea>
-      <button type="submit" data-i18n="contact_send">Enviar Mensagem</button>
-      <p id="mensagem-sucesso" class="mensagem-sucesso" hidden data-i18n="contact_success">Mensagem enviada com sucesso!</p>
-    </form>
-  </main>
+    <header>
+        <h1>Contato</h1>
+        <p class="subtitle">Vamos conversar sobre oportunidades ou projetos</p>
+    </header>
 
-  <footer>
-    <p data-i18n="footer_copy">© 2026 Rodrigo Viana - Todos os direitos reservados.</p>
-  </footer>
+    <main class="container">
 
-  <div id="cookie-banner" class="cookie-banner">
-    <span data-i18n="cookie_text">Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa política de privacidade.</span>
-    <button type="button" data-accept-cookies data-i18n="cookie_btn">Entendi</button>
-  </div>
+        <section class="contact-card">
+            <h2>Entre em contato</h2>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script src="js/common.js?v=6"></script>
-  <script src="js/contact.js?v=5"></script>
+            <form>
+
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input type="text" placeholder="Seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="seu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Mensagem</label>
+                    <textarea rows="5" placeholder="Digite sua mensagem..."></textarea>
+                </div>
+
+                <button type="submit">Enviar mensagem</button>
+
+            </form>
+        </section>
+
+    </main>
+
 </body>
 </html>
-
-
-
-
-
-

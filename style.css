@@ -524,3 +524,74 @@ body.dark-mode .geo-toggle:hover {
     font-size: 0.84rem;
   }
 }
+
+.icon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 16px;
+  border-radius: 14px;
+
+  border: 1px solid var(--line);
+  background: var(--card);
+  box-shadow: var(--shadow);
+
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.icon-card img {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-card span {
+  font-size: 0.85rem;
+}
+
+.icon-card:hover {
+  transform: translateY(-4px);
+}
+
+/* AJUSTE GRID DOS ÍCONES */
+.contato-icones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* FORM MAIS “PRODUTO” */
+.form-contato {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* INPUT COM MICROINTERAÇÃO */
+.form-contato input,
+.form-contato textarea {
+  transition: all 0.2s ease;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  transform: scale(1.01);
+}
+
+/* BOTÃO MAIS FORTE */
+.form-contato button {
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* DARK MODE AJUSTE */
+body.dark-mode .icon-card {
+  background: var(--card);
+  border-color: var(--line);
+}
